@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>After Hours</title>
+<meta name="description" content="Describe how you feel and After Hours builds a playlist to match your mood, or lift you out of it.">
+<meta name="theme-color" content="#121014">
+<meta property="og:type" content="website">
+<meta property="og:title" content="After Hours">
+<meta property="og:description" content="Music for how you feel. Describe your mood, get a playlist.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect width='30' height='30' rx='7' fill='%23121014'/%3E%3Ccircle cx='15' cy='15' r='11' fill='%23ffa24c'/%3E%3Ccircle cx='19.5' cy='11' r='8' fill='%23121014'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,400;1,6..96,500&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="stage" aria-hidden="true"></canvas>
+<div id="fallbackOrb" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"></div>
+<div id="flash" aria-hidden="true"></div>
+<div id="orbLabel" aria-hidden="true"><span class="nm" id="orbLabelName">Your orb</span><span class="st" id="orbLabelState">listening</span></div>
+<div class="sheet" id="settings" role="dialog" aria-modal="true" aria-labelledby="setTitle" hidden>
+  <form class="sheet-card" id="setForm">
+    <div class="sheet-head"><h4 id="setTitle">Settings</h4><button class="pill" id="setClose" type="button">Close</button></div>
+    <label for="orbName">Name your orb</label>
+    <input id="orbName" maxlength="20" autocomplete="off" placeholder="e.g. Nova">
+    <p class="hint">It answers to this name around the site. Leave it empty to keep "the orb".</p>
+    <label for="wxMode">Weather</label>
+    <select id="wxMode">
+      <option value="auto">Use my local weather</option>
+      <option value="clear">Clear sky</option>
+      <option value="clouds">Cloudy</option>
+      <option value="fog">Foggy</option>
+      <option value="rain">Rain</option>
+      <option value="storm">Thunderstorm</option>
+      <option value="snow">Snow</option>
+      <option value="wind">Windy</option>
+      <option value="off">Ignore the weather</option>
+    </select>
+    <p class="hint" id="wxHint">The weather changes how the orb sounds: rain, thunder, wind and snow each add their own layer.</p>
+    <button class="go" type="submit">Save settings</button>
+  </form>
+</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#start" aria-label="After Hours home">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="14" fill="#ffa24c"/><circle cx="20.5" cy="10.5" r="10" fill="#121014"/></svg>
+      <span class="brand-name">After Hours</span>
+    </a>
+    <div class="top-actions">
+      <button class="pill" id="soundBtn" type="button" aria-pressed="false"><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span id="soundLabel">Sound off</span></button>
+      <button class="pill" id="setBtn" type="button" aria-haspopup="dialog">Settings</button>
+      <button class="pill" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="wrap">
+    <button class="pill close" id="menuClose" type="button">Close</button>
+    <ol>
+      <li><a href="#start">Make a playlist</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#stations">Stations</a></li>
+      <li><a href="#saved">Your nights</a></li>
+      <li><a href="#settings" id="menuSettings">Settings</a></li>
+    </ol>
+    <div class="foot"><span>After Hours · music for how you feel</span><span>Tip: turn the sound on and tap <span class="orbname">the orb</span></span></div>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <div class="hero" id="start">
+      <div class="hero-inner">
+        <p class="label" style="margin:0 0 18px">Music discovery, after dark</p>
+        <h1 id="headline"><span class="w">How</span> <span class="w">do</span> <span class="w">you</span> <span class="w">feel</span> <em class="w">tonight?</em></h1>
+        <p class="lede">Describe it in your own words. After Hours reads the mood and builds a playlist to match it, or to lift you out of it.</p>
+
+        <form class="ask" id="ask">
+          <label for="feeling">Describe how you feel</label>
+          <textarea id="feeling" maxlength="500" placeholder="e.g. Long day, a little lonely, but the rain outside is kind of nice…"></textarea>
+          <div class="ask-bar">
+            <div class="toggle" role="group" aria-label="Playlist direction">
+              <button type="button" id="mode-match" aria-pressed="true">Stay with it</button>
+              <button type="button" id="mode-lift" aria-pressed="false">Lift me up</button>
+            </div>
+            <button class="go" id="go" type="submit">Make my playlist <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+        <div class="tries" id="tries"></div>
+      </div>
+      <div class="hero-foot">
+        <div class="scrollcue label"><span class="line"></span>Scroll to explore</div>
+        <div class="orbhint" id="orbHint"><button class="wxchip" id="wxChip" type="button"><span class="d"></span><span id="wxText">Checking local weather…</span></button><b>Tap <span class="orbname">the orb</span></b> to hear tonight's mood</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="statement reveal" id="how">
+      <p class="label">How it works</p>
+      <p class="big">Tell it how tonight feels. It <em>answers in songs.</em></p>
+      <div class="steps">
+        <div><span class="label">01</span><b>Describe it</b><p>Write a sentence, a word, or a mess of feelings. All of it counts.</p></div>
+        <div><span class="label">02</span><b>Pick a direction</b><p>Stay with the mood, or start there and climb somewhere brighter.</p></div>
+        <div><span class="label">03</span><b>Press play</b><p>Every track opens on Spotify or YouTube. Copy the list, keep the night.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="result" id="result" aria-live="polite"></section>
+  </div>
+
+  <div class="wrap">
+    <section id="stations" class="reveal">
+      <div class="sec-head">
+        <div><p class="label">Stations</p><h3>Or pick a mood</h3></div>
+        <p class="sub">Twelve late-night frequencies. Hover to feel each one, click to tune in.</p>
+      </div>
+      <ol class="stations" id="stationList"></ol>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section id="saved" class="reveal">
+      <div class="sec-head">
+        <div><p class="label">Archive</p><h3>Your nights</h3></div>
+        <p class="sub">Playlists you made recently, kept in this browser.</p>
+      </div>
+      <div class="saved" id="savedList"></div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="cta reveal">
+      <p class="label">Still up?</p>
+      <p class="huge">Can't sleep?<br><em>Press play.</em></p>
+      <a class="go" href="#start">Make a playlist <span aria-hidden="true">↑</span></a>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>After Hours · music for how you feel</span><span>Tracks open on Spotify or YouTube</span></div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="app.js"></script>
+</body>
+</html>
