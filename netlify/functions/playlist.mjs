@@ -2,8 +2,12 @@
 // Needs the environment variable GEMINI_API_KEY (Netlify → Site configuration → Environment variables).
 // Optional: GEMINI_MODEL to force a specific model.
 
-const MODELS = ["gemini-flash-latest", "gemini-flash-lite-latest"];
-const ENDPOINT = m => `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`;
+// Works two ways:
+// 1. Netlify AI Gateway (no key needed): Netlify injects GEMINI_API_KEY + GOOGLE_GEMINI_BASE_URL.
+// 2. Your own Google key: set GEMINI_API_KEY yourself and requests go straight to Google.
+const MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-flash-latest"];
+const env = k => (globalThis.Netlify?.env?.get?.(k)) || process.env[k];
+const ENDPOINT = m => `${(env("GOOGLE_GEMINI_BASE_URL") || "https://generativelanguage.googleapis.com").replace(/\/+$/, "")}/v1beta/models/${m}:generateContent`;
 
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
@@ -80,7 +84,8 @@ async function ask(model, key, prompt) {
   if (!r.ok) {
     const msg = await r.text().catch(() => "");
     const e = new Error("gemini " + r.status); e.status = r.status;
-    e.badKey = r.status === 401 || r.status === 403 || /api key|API_KEY/i.test(msg);
+    e.badKey = (r.status === 401 || r.status === 403 || /api key not valid|API_KEY_INVALID/i.test(msg)) && !/model/i.test(msg);
+    e.detail = msg.slice(0, 300);
     throw e;
   }
   const data = await r.json();
@@ -90,7 +95,7 @@ async function ask(model, key, prompt) {
 
 export default async (req) => {
   if (req.method !== "POST") return json({ error: "method" }, 405);
-  const key = (globalThis.Netlify?.env?.get?.("GEMINI_API_KEY")) || process.env.GEMINI_API_KEY;
+  const key = env("GEMINI_API_KEY");
   if (!key) return json({ error: "not_configured" }, 503);
 
   let body;
@@ -103,7 +108,7 @@ export default async (req) => {
   const avoid = (Array.isArray(body.avoid) ? body.avoid : []).slice(0, 80).map(s => clean(s, 100)).filter(Boolean);
 
   const prompt = buildPrompt({ text, mode, genre, avoid, count });
-  const forced = (globalThis.Netlify?.env?.get?.("GEMINI_MODEL")) || process.env.GEMINI_MODEL;
+  const forced = env("GEMINI_MODEL");
   const models = forced ? [forced, ...MODELS] : MODELS;
 
   let lastErr = null;
@@ -130,6 +135,7 @@ export default async (req) => {
       if (e.badKey) break;
     }
   }
+  console.error("playlist: all models failed", lastErr?.status, lastErr?.detail || lastErr?.message);
   return json({ error: lastErr?.badKey ? "key" : lastErr?.status === 429 ? "busy" : "unavailable" }, 502);
 };
 
