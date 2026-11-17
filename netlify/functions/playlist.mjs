@@ -5,7 +5,7 @@
 // Works two ways:
 // 1. Netlify AI Gateway (no key needed): Netlify injects GEMINI_API_KEY + GOOGLE_GEMINI_BASE_URL.
 // 2. Your own Google key: set GEMINI_API_KEY yourself and requests go straight to Google.
-const MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash", "gemini-flash-latest"];
+const MODELS = ["gemini-3.5-flash-lite", "gemini-3.1-flash-lite", "gemini-3.8-flash", "gemini-flash-lite-latest"];
 const env = k => (globalThis.Netlify?.env?.get?.(k)) || process.env[k];
 const ENDPOINT = m => `${(env("GOOGLE_GEMINI_BASE_URL") || "https://generativelanguage.googleapis.com").replace(/\/+$/, "")}/v1beta/models/${m}:generateContent`;
 
