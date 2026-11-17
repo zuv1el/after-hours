@@ -21,7 +21,7 @@
 ## How the playlists are made
 
 1. The page sends the listener's words, direction, genre and the songs to avoid to `/api/playlist`, a Netlify Function.
-2. The function asks Google Gemini for 16 real songs and a short reading of the mood.
+2. The function asks Google Gemini (through Netlify AI Gateway) for 16 real songs and a short reading of the mood.
 3. The page checks each song with the iTunes Search API, then Deezer for anything Apple doesn't carry (both free, no key). It keeps the first 12 that exist and attaches the preview, cover art and an exact link.
 
 If the AI isn't set up, is busy or has used its free daily quota, the site keeps working:
@@ -36,17 +36,17 @@ If the AI isn't set up, is busy or has used its free daily quota, the site keeps
 | `index.html` | Page structure |
 | `styles.css` | All styling (night ink + streetlight amber) |
 | `app.js` | Mood reading, playlists, previews, 3D scene (three.js), generative sound (Web Audio), weather, settings |
-| `netlify/functions/playlist.mjs` | The AI curator (calls Gemini with the secret key) |
+| `netlify/functions/playlist.mjs` | The AI curator (calls Gemini through Netlify AI Gateway) |
 | `netlify.toml` | Netlify settings: publish folder and functions folder |
 | `_headers` | Security headers that Netlify applies automatically |
 
 ## Setup
 
-1. Get a free Gemini API key at https://aistudio.google.com/apikey
-2. In Netlify: **Project configuration → Environment variables → Add a variable**: key `GEMINI_API_KEY`, value your key. Optional: `GEMINI_MODEL` to choose a specific model.
-3. Redeploy. The key stays on the server and is never sent to the browser.
+Nothing to configure. The site deploys from this repository on Netlify, and the AI function uses **Netlify AI Gateway**, which supplies the Gemini connection automatically. Usage is paid in Netlify credits (the Free plan includes a monthly allowance).
 
-The free Gemini tier has a daily limit. When it runs out, the site falls back to the built-in engine until the next day.
+Optional: to use your own Google Gemini key instead, add `GEMINI_API_KEY` under **Project configuration → Environment variables** in Netlify and redeploy. `GEMINI_MODEL` can force a specific model.
+
+If the AI is unavailable or credits run out, the site falls back to the built-in engine automatically.
 
 ## Run it locally
 
@@ -58,7 +58,7 @@ npx netlify-cli dev             # needs GEMINI_API_KEY in your environment
 
 ## Tech
 
-- **Google Gemini** (through a Netlify Function) to pick songs
+- **Google Gemini** via **Netlify AI Gateway** (in a Netlify Function) to pick songs
 - **iTunes Search API** and **Deezer API** for previews, cover art and exact links
 - **three.js r128** (from cdnjs, with an integrity check) for the 3D orb and sky
 - **Web Audio API** for the generated soundtrack
