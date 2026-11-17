@@ -1,0 +1,22 @@
+# After Hours — Netlify settings
+# Static site in the repo root, plus one serverless function for the AI playlists.
+
+[build]
+  publish = "."
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+
+# Keep repo-only files off the public site
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"
+  to = "/404.html"
+  status = 404
+  force = true

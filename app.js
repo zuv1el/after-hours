@@ -7,99 +7,122 @@ const MOODS = {
   rain:{name:"Rain on the Window",freq:"88.7",v:-.45,e:-.5,light:.38,root:57,tags:"slow · soft · rainy",
     read:"You sound quiet and a little heavy. These songs keep you company without asking you to cheer up.",
     titles:["Window Seat","Soft Static","Condensation"],
-    tracks:["Holocene|Bon Iver","Pink Moon|Nick Drake","Fade Into You|Mazzy Star","Motion Sickness|Phoebe Bridgers","Video Games|Lana Del Rey","Exit Music (For a Film)|Radiohead","Breathe Me|Sia","Ivy|Frank Ocean","Lua|Bright Eyes","Re: Stacks|Bon Iver","Teardrop|Massive Attack","Retrograde|James Blake"]},
+    tracks:["Holocene|Bon Iver","Pink Moon|Nick Drake","Fade Into You|Mazzy Star","Motion Sickness|Phoebe Bridgers","Video Games|Lana Del Rey","Exit Music (For a Film)|Radiohead","Breathe Me|Sia","Ivy|Frank Ocean","Lua|Bright Eyes","Re: Stacks|Bon Iver","Teardrop|Massive Attack","Retrograde|James Blake","lovely|Billie Eilish & Khalid","ocean eyes|Billie Eilish","Bags|Clairo","Cherry Wine|Hozier","Moon Song|Phoebe Bridgers","Godspeed|Frank Ocean","Glimpse of Us|Joji","SLOW DANCING IN THE DARK|Joji","Atlantis|Seafret","Let Her Go|Passenger","Lost Boy|Ruth B.","Another Love|Tom Odell"]},
   heart:{name:"Left on Read",freq:"90.3",v:-.8,e:-.15,light:.3,root:52,tags:"aching · honest",
     read:"Something or someone is weighing on you. This one lets you feel it fully, then breathe.",
     titles:["Unsent","Left on Read","The Long Way Home"],
-    tracks:["Someone Like You|Adele","drivers license|Olivia Rodrigo","Liability|Lorde","Skinny Love|Bon Iver","Back to Black|Amy Winehouse","Nothing Compares 2 U|Sinéad O'Connor","Self Control|Frank Ocean","Jealous|Labrinth","Happier Than Ever|Billie Eilish","I Can't Make You Love Me|Bonnie Raitt","The Night We Met|Lord Huron","All Too Well (10 Minute Version)|Taylor Swift"]},
+    tracks:["Someone Like You|Adele","drivers license|Olivia Rodrigo","Liability|Lorde","Skinny Love|Bon Iver","Back to Black|Amy Winehouse","Nothing Compares 2 U|Sinéad O'Connor","Self Control|Frank Ocean","Jealous|Labrinth","Happier Than Ever|Billie Eilish","I Can't Make You Love Me|Bonnie Raitt","The Night We Met|Lord Huron","All Too Well (10 Minute Version)|Taylor Swift","Someone You Loved|Lewis Capaldi","Too Good at Goodbyes|Sam Smith","Stay With Me|Sam Smith","When I Was Your Man|Bruno Mars","traitor|Olivia Rodrigo","Easy On Me|Adele","Somebody That I Used to Know|Gotye ft. Kimbra","Lose You to Love Me|Selena Gomez","Say Something|A Great Big World & Christina Aguilera","The Scientist|Coldplay","Un-Break My Heart|Toni Braxton","Ex-Factor|Lauryn Hill"]},
   late:{name:"3 A.M. Thoughts",freq:"92.1",v:-.35,e:.35,light:.42,root:54,tags:"restless · wired",
     read:"Your mind is still running. These tracks give the restlessness somewhere to go.",
     titles:["Wide Awake","3 A.M. Thoughts","Ceiling Fan"],
-    tracks:["Do I Wanna Know?|Arctic Monkeys","Nights|Frank Ocean","Free Mind|Tems","Everything In Its Right Place|Radiohead","Redbone|Childish Gambino","Let It Happen|Tame Impala","Angel|Massive Attack","Insomnia|Faithless","505|Arctic Monkeys","Little Dark Age|MGMT","Stressed Out|Twenty One Pilots","Paranoid Android|Radiohead"]},
+    tracks:["Do I Wanna Know?|Arctic Monkeys","Nights|Frank Ocean","Free Mind|Tems","Everything In Its Right Place|Radiohead","Redbone|Childish Gambino","Let It Happen|Tame Impala","Angel|Massive Attack","Insomnia|Faithless","505|Arctic Monkeys","Little Dark Age|MGMT","Stressed Out|Twenty One Pilots","Paranoid Android|Radiohead","Heathens|Twenty One Pilots","bad guy|Billie Eilish","Creep|Radiohead","R U Mine?|Arctic Monkeys","The Hills|The Weeknd","Losing My Religion|R.E.M.","breathin|Ariana Grande","Anxiety|Julia Michaels ft. Selena Gomez","Lucid Dreams|Juice WRLD","Ghost Town|Kanye West","Midnight|Coldplay","Mr. Brightside|The Killers"]},
   burn:{name:"Pressure Valve",freq:"93.9",v:-.7,e:.85,light:.5,root:52,tags:"loud · fast · cathartic",
     read:"There's heat in what you wrote. Loud, fast songs to let it out safely.",
     titles:["Pressure Valve","Let It Out","Red Line"],
-    tracks:["Killing in the Name|Rage Against the Machine","Smells Like Teen Spirit|Nirvana","Misery Business|Paramore","Given Up|Linkin Park","HUMBLE.|Kendrick Lamar","Sabotage|Beastie Boys","Chop Suey!|System of a Down","You Oughta Know|Alanis Morissette","Seven Nation Army|The White Stripes","Bodies|Drowning Pool","Power|Kanye West","Break Stuff|Limp Bizkit"]},
+    tracks:["Killing in the Name|Rage Against the Machine","Smells Like Teen Spirit|Nirvana","Misery Business|Paramore","Given Up|Linkin Park","HUMBLE.|Kendrick Lamar","Sabotage|Beastie Boys","Chop Suey!|System of a Down","You Oughta Know|Alanis Morissette","Seven Nation Army|The White Stripes","Bodies|Drowning Pool","Power|Kanye West","Break Stuff|Limp Bizkit","DNA.|Kendrick Lamar","Not Like Us|Kendrick Lamar","Last Resort|Papa Roach","Duality|Slipknot","Bulls on Parade|Rage Against the Machine","Song 2|Blur","Black Skinhead|Kanye West","SICKO MODE|Travis Scott","Since U Been Gone|Kelly Clarkson","good 4 u|Olivia Rodrigo","Kill Bill|SZA","In the End|Linkin Park"]},
   focus:{name:"Deep Work",freq:"95.5",v:.1,e:-.25,light:.48,root:55,tags:"steady · instrumental",
     read:"You need your head clear. Mostly instrumental, steady, nothing that pulls your attention.",
     titles:["Deep Work","Heads Down","Quiet Hours"],
-    tracks:["Weightless|Marconi Union","An Ending (Ascent)|Brian Eno","Avril 14th|Aphex Twin","Nuvole Bianche|Ludovico Einaudi","Says|Nils Frahm","Kiara|Bonobo","Intro|The xx","On the Nature of Daylight|Max Richter","Gymnopédie No. 1|Erik Satie","Strobe|deadmau5","Opus|Eric Prydz","Kong|Bonobo"]},
+    tracks:["Weightless|Marconi Union","An Ending (Ascent)|Brian Eno","Avril 14th|Aphex Twin","Nuvole Bianche|Ludovico Einaudi","Says|Nils Frahm","Kiara|Bonobo","Intro|The xx","On the Nature of Daylight|Max Richter","Gymnopédie No. 1|Erik Satie","Strobe|deadmau5","Opus|Eric Prydz","Kong|Bonobo","Experience|Ludovico Einaudi","Clair de Lune|Claude Debussy","Time|Hans Zimmer","Comptine d'un autre été, l'après-midi|Yann Tiersen","Sunset Lover|Petit Biscuit","Cirrus|Bonobo","Porcelain|Moby","Hoppípolla|Sigur Rós","1/1|Brian Eno","Spiegel im Spiegel|Arvo Pärt","Innerbloom|RÜFÜS DU SOL","A Moment Apart|ODESZA"]},
   slow:{name:"Slow Burn",freq:"97.1",v:.55,e:-.1,light:.55,root:53,tags:"warm · close",
     read:"There's warmth here, maybe someone on your mind. Slow, close, unhurried songs.",
     titles:["Slow Burn","Candlelight","Close"],
-    tracks:["Best Part|Daniel Caesar & H.E.R.","Thinkin Bout You|Frank Ocean","Adorn|Miguel","Essence|Wizkid ft. Tems","Location|Khalid","Snooze|SZA","Get You|Daniel Caesar ft. Kali Uchis","Electric|Alina Baraz ft. Khalid","Let's Stay Together|Al Green","At Last|Etta James","Sure Thing|Miguel","Love Galore|SZA ft. Travis Scott"]},
+    tracks:["Best Part|Daniel Caesar & H.E.R.","Thinkin Bout You|Frank Ocean","Adorn|Miguel","Essence|Wizkid ft. Tems","Location|Khalid","Snooze|SZA","Get You|Daniel Caesar ft. Kali Uchis","Electric|Alina Baraz ft. Khalid","Let's Stay Together|Al Green","At Last|Etta James","Sure Thing|Miguel","Love Galore|SZA ft. Travis Scott","Forever|Gyakie","love nwantiti (ah ah ah)|CKay","FALL|Davido","Earned It|The Weeknd","Die For You|The Weeknd","Kiss Me More|Doja Cat ft. SZA","Come Through|H.E.R. ft. Chris Brown","Bad Habit|Steve Lacy","Leave the Door Open|Bruno Mars, Anderson .Paak & Silk Sonic","Japanese Denim|Daniel Caesar","Sugarcane|Camidoh","Kiss Me|Sixpence None the Richer"]},
   gold:{name:"Golden Hour",freq:"98.7",v:.7,e:-.55,light:.66,root:50,tags:"easy · sunlit",
     read:"You sound settled and easy. Warm, gentle songs to stay right where you are.",
     titles:["Golden Hour","Easy Now","Sunday Light"],
-    tracks:["Here Comes the Sun|The Beatles","Lovely Day|Bill Withers","Put Your Records On|Corinne Bailey Rae","Banana Pancakes|Jack Johnson","Sunday Morning|The Velvet Underground","Pink + White|Frank Ocean","Golden Hour|JVKE","Island in the Sun|Weezer","Riptide|Vance Joy","Better Together|Jack Johnson","Golden|Harry Styles","Sunflower|Rex Orange County"]},
+    tracks:["Here Comes the Sun|The Beatles","Lovely Day|Bill Withers","Put Your Records On|Corinne Bailey Rae","Banana Pancakes|Jack Johnson","Sunday Morning|The Velvet Underground","Pink + White|Frank Ocean","Golden Hour|JVKE","Island in the Sun|Weezer","Riptide|Vance Joy","Better Together|Jack Johnson","Golden|Harry Styles","Sunflower|Rex Orange County","Three Little Birds|Bob Marley & The Wailers","Good Days|SZA","Sunday Best|Surfaces","Coffee|beabadoobee","Bloom|The Paper Kites","Yellow|Coldplay","Ho Hey|The Lumineers","Feels Like Summer|Childish Gambino","Sweet Life|Frank Ocean","What a Wonderful World|Louis Armstrong","Upside Down|Jack Johnson"]},
   neon:{name:"Neon Drive",freq:"100.3",v:.25,e:.45,light:.52,root:54,tags:"cool · cinematic",
     read:"Cool, moving, a little cinematic. Songs for city lights going past the window.",
     titles:["Neon Drive","Night Shift","Open Road"],
-    tracks:["Midnight City|M83","Nightcall|Kavinsky","Blinding Lights|The Weeknd","A Real Hero|College & Electric Youth","The Less I Know the Better|Tame Impala","Instant Crush|Daft Punk ft. Julian Casablancas","Starboy|The Weeknd ft. Daft Punk","Tadow|Masego & FKJ","Electric Feel|MGMT","Genesis|Grimes","After Dark|Mr.Kitty","Ye|Burna Boy"]},
+    tracks:["Midnight City|M83","Nightcall|Kavinsky","Blinding Lights|The Weeknd","A Real Hero|College & Electric Youth","The Less I Know the Better|Tame Impala","Instant Crush|Daft Punk ft. Julian Casablancas","Starboy|The Weeknd ft. Daft Punk","Tadow|Masego & FKJ","Electric Feel|MGMT","Genesis|Grimes","After Dark|Mr.Kitty","Ye|Burna Boy","Sweater Weather|The Neighbourhood","Save Your Tears|The Weeknd","Feel Good Inc.|Gorillaz","Resonance|HOME","Tech Noir|GUNSHIP","Under Your Spell|Desire","Out of Time|The Weeknd","Champagne Coast|Blood Orange","Time to Pretend|MGMT","Ku Lo Sa|Oxlade","Love Me JeJe|Tems","Pursuit of Happiness|Kid Cudi"]},
   main:{name:"Main Character",freq:"101.9",v:.75,e:.7,light:.6,root:55,tags:"big · confident",
     read:"You're feeling strong tonight. Big, confident songs to match it.",
     titles:["Main Character","Victory Lap","Walk-In Music"],
-    tracks:["Feeling Good|Nina Simone","Lose Yourself|Eminem","Stronger|Kanye West","Good as Hell|Lizzo","Run the World (Girls)|Beyoncé","Can't Hold Us|Macklemore & Ryan Lewis","Don't Stop Me Now|Queen","Alright|Kendrick Lamar","Mr. Blue Sky|Electric Light Orchestra","Kwaku the Traveller|Black Sherif","Titanium|David Guetta ft. Sia","Eye of the Tiger|Survivor"]},
+    tracks:["Feeling Good|Nina Simone","Lose Yourself|Eminem","Stronger|Kanye West","Good as Hell|Lizzo","Run the World (Girls)|Beyoncé","Can't Hold Us|Macklemore & Ryan Lewis","Don't Stop Me Now|Queen","Alright|Kendrick Lamar","Mr. Blue Sky|Electric Light Orchestra","Kwaku the Traveller|Black Sherif","Titanium|David Guetta ft. Sia","Eye of the Tiger|Survivor","Second Sermon|Black Sherif","Hall of Fame|The Script ft. will.i.am","Remember the Name|Fort Minor","'Till I Collapse|Eminem","Survivor|Destiny's Child","Confident|Demi Lovato","Unstoppable|Sia","Juice|Lizzo","Formation|Beyoncé","God's Plan|Drake","Sore|Yaw Tog","Started From the Bottom|Drake"]},
   party:{name:"Afterparty",freq:"103.5",v:.85,e:.95,light:.62,root:57,tags:"bright · danceable",
     read:"You want to move. Bright, danceable songs from start to finish.",
     titles:["Afterparty","Lights Up","One More Song"],
-    tracks:["One More Time|Daft Punk","Get Lucky|Daft Punk ft. Pharrell Williams","Levitating|Dua Lipa","Calm Down|Rema","Last Last|Burna Boy","Water|Tyla","Rush|Ayra Starr","Uptown Funk|Mark Ronson ft. Bruno Mars","I Wanna Dance with Somebody|Whitney Houston","Dancing On My Own|Robyn","September|Earth, Wind & Fire","Padam Padam|Kylie Minogue"]},
+    tracks:["One More Time|Daft Punk","Get Lucky|Daft Punk ft. Pharrell Williams","Levitating|Dua Lipa","Calm Down|Rema","Last Last|Burna Boy","Water|Tyla","Rush|Ayra Starr","Uptown Funk|Mark Ronson ft. Bruno Mars","I Wanna Dance with Somebody|Whitney Houston","Dancing On My Own|Robyn","September|Earth, Wind & Fire","Padam Padam|Kylie Minogue","Sungba|Asake","Terminator|Asake","Peru|Fireboy DML","Buga (Lo Lo Lo)|Kizz Daniel & Tekno","Unavailable|Davido ft. Musa Keys","Don't Start Now|Dua Lipa","Shut Up and Dance|Walk the Moon","Murder on the Dancefloor|Sophie Ellis-Bextor","Espresso|Sabrina Carpenter","Ameno Amapiano (You Wanna Bamba)|Goya Menor & Nektunez","Angela|Kuami Eugene","Ojapiano|Kcee"]},
   past:{name:"Rearview",freq:"105.1",v:-.05,e:-.35,light:.45,root:52,tags:"bittersweet · fond",
     read:"You're somewhere between missing and remembering. Bittersweet songs that look back fondly.",
     titles:["Rearview","Old Photos","Back Then"],
-    tracks:["Ribs|Lorde","Dreams|Fleetwood Mac","Space Song|Beach House","Fast Car|Tracy Chapman","1979|The Smashing Pumpkins","Sweet Disposition|The Temper Trap","Apocalypse|Cigarettes After Sex","Summertime Sadness|Lana Del Rey","Youth|Daughter","The Suburbs|Arcade Fire","Landslide|Fleetwood Mac","Heroes|David Bowie"]},
+    tracks:["Ribs|Lorde","Dreams|Fleetwood Mac","Space Song|Beach House","Fast Car|Tracy Chapman","1979|The Smashing Pumpkins","Sweet Disposition|The Temper Trap","Apocalypse|Cigarettes After Sex","Summertime Sadness|Lana Del Rey","Youth|Daughter","The Suburbs|Arcade Fire","Landslide|Fleetwood Mac","Heroes|David Bowie","Wonderwall|Oasis","Photograph|Ed Sheeran","7 Years|Lukas Graham","See You Again|Wiz Khalifa ft. Charlie Puth","Good Riddance (Time of Your Life)|Green Day","Summer of '69|Bryan Adams","Kids|MGMT","Somewhere Only We Know|Keane","Iris|The Goo Goo Dolls","Ojuelegba|Wizkid","Lost in Yesterday|Tame Impala","Glory Days|Bruce Springsteen"]},
   empty:{name:"Low Battery",freq:"106.7",v:-.55,e:-.85,light:.34,root:50,tags:"gentle · quiet",
     read:"You sound worn out. Gentle songs that ask nothing of you and help you rest.",
     titles:["Low Battery","Rest Mode","Power Down"],
-    tracks:["Fix You|Coldplay","Mad World|Gary Jules","Everybody Hurts|R.E.M.","Breathe (2 AM)|Anna Nalick","How to Disappear Completely|Radiohead","Comfortably Numb|Pink Floyd","Let It Be|The Beatles","Hallelujah|Jeff Buckley","Bloodbuzz Ohio|The National","Breathe|Télépopmusik","Hurt|Johnny Cash","Holocene|Bon Iver"]}
+    tracks:["Fix You|Coldplay","Mad World|Gary Jules","Everybody Hurts|R.E.M.","Breathe (2 AM)|Anna Nalick","How to Disappear Completely|Radiohead","Comfortably Numb|Pink Floyd","Let It Be|The Beatles","Hallelujah|Jeff Buckley","Bloodbuzz Ohio|The National","Breathe|Télépopmusik","Hurt|Johnny Cash","Holocene|Bon Iver","Bruises|Lewis Capaldi","Daylight|David Kushner","Unsteady|X Ambassadors","Lonely|Justin Bieber & benny blanco","Numb|Linkin Park","Rivers and Roads|The Head and the Heart","Shelter|Porter Robinson & Madeon","Funeral|Phoebe Bridgers","Be Alright|Dean Lewis","The Sound of Silence|Simon & Garfunkel","Everybody's Gotta Learn Sometime|Beck","Into My Arms|Nick Cave & The Bad Seeds"]}
 };
+/* Genres for the picker. People can also type any genre that is not listed. */
+const GENRES=["Afrobeats","Afrobeat","Afro-pop","Afro-fusion","Afro-soul","Afro house","Afro-swing","Alté","Amapiano","Highlife","Hiplife","Asakaa (Ghana drill)","Azonto","Gqom","Kwaito","Kizomba","Kuduro","Semba","Soukous","Rumba congolaise","Ndombolo","Bongo Flava","Gengetone","Benga","Mbalax","Makossa","Coupé-décalé","Zouglou","Juju","Fuji","Apala","Afro-gospel","Ghanaian gospel","Naija street pop","Street hop","Shaku shaku","Zanku","Bikutsi","Chimurenga","Taarab","Malian blues","Desert blues","Ethio-jazz","Raï","Gnawa","Chaabi","Maskandi","Mbaqanga","Marrabenta","Zouk","Kompa","Pop","Dance pop","Electropop","Synth-pop","Indie pop","Dream pop","Bedroom pop","Art pop","Hyperpop","Teen pop","Bubblegum pop","Power pop","Chamber pop","Sophisti-pop","Baroque pop","Pop rock","Pop punk","Britpop","Europop","Italo disco","Schlager","Chanson","French pop","Yé-yé","R&B","Contemporary R&B","Alternative R&B","Neo soul","Soul","Northern soul","Motown","Funk","P-Funk","Disco","Nu-disco","Boogie","New jack swing","Quiet storm","Gospel","Contemporary gospel","Worship","Christian contemporary","Doo-wop","Blues","Delta blues","Chicago blues","Electric blues","Blues rock","Hip-hop","Rap","Trap","Drill","UK drill","Brooklyn drill","Chicago drill","Boom bap","Conscious hip-hop","Gangsta rap","West Coast hip-hop","East Coast hip-hop","Southern hip-hop","Crunk","Phonk","Cloud rap","Emo rap","Lo-fi hip-hop","Jazz rap","Grime","UK rap","Afro-trap","French rap","German rap","Latin trap","Jersey club","Baltimore club","Plugg","Rage","Rock","Classic rock","Hard rock","Alternative rock","Indie rock","Garage rock","Punk rock","Post-punk","New wave","Grunge","Emo","Post-hardcore","Shoegaze","Post-rock","Math rock","Psychedelic rock","Progressive rock","Krautrock","Stoner rock","Southern rock","Surf rock","Rockabilly","Folk rock","Soft rock","Yacht rock","Glam rock","Arena rock","Heartland rock","Britrock","J-rock","Metal","Heavy metal","Thrash metal","Death metal","Black metal","Doom metal","Nu metal","Metalcore","Deathcore","Djent","Power metal","Symphonic metal","Folk metal","Industrial metal","Sludge metal","Gothic metal","Glam metal","Electronic","EDM","House","Deep house","Tech house","Progressive house","French house","Garage","UK garage","Speed garage","2-step","Techno","Minimal techno","Detroit techno","Hard techno","Trance","Psytrance","Drum and bass","Liquid drum and bass","Jungle","Dubstep","Brostep","Future bass","Trap (EDM)","Hardstyle","Gabber","Breakbeat","Big beat","Electro","Electroclash","Synthwave","Retrowave","Darksynth","Vaporwave","Chillwave","Downtempo","Trip-hop","Chillout","Ambient","Dark ambient","IDM","Glitch","Footwork","Baile funk","Moombahton","Tropical house","Melodic techno","Disco house","Hi-NRG","Eurodance","Dance-punk","Industrial","EBM","Jazz","Bebop","Cool jazz","Hard bop","Modal jazz","Free jazz","Jazz fusion","Smooth jazz","Acid jazz","Nu jazz","Swing","Big band","Vocal jazz","Latin jazz","Spiritual jazz","Gypsy jazz","Dixieland","Ragtime","Classical","Baroque","Romantic era classical","Opera","Choral","Chamber music","Minimalism","Contemporary classical","Neoclassical","Film score","Video game music","Piano solo","String quartet","Musical theatre","Country","Classic country","Country pop","Outlaw country","Americana","Bluegrass","Alt-country","Honky-tonk","Red dirt","Folk","Indie folk","Contemporary folk","Anti-folk","Singer-songwriter","Celtic","Irish folk","Sea shanties","Appalachian folk","Freak folk","Reggae","Roots reggae","Dancehall","Dub","Ska","Rocksteady","Lovers rock","Reggaeton","Soca","Calypso","Bouyon","Zouk love","Steelpan","Afro-Caribbean","Latin","Latin pop","Salsa","Bachata","Merengue","Cumbia","Vallenato","Banda","Norteño","Corridos tumbados","Regional Mexican","Mariachi","Ranchera","Tango","Bossa nova","Samba","MPB","Forró","Sertanejo","Axé","Funk carioca","Bolero","Son cubano","Timba","Tejano","Latin rock","Latin R&B","Dembow","K-pop","K-R&B","K-hip-hop","K-indie","J-pop","City pop","Anime","Vocaloid","Enka","Visual kei","C-pop","Mandopop","Cantopop","T-pop","V-pop","OPM","P-pop","Indonesian pop","Dangdut","Bollywood","Indian classical","Carnatic","Hindustani classical","Bhangra","Punjabi pop","Sufi","Qawwali","Ghazal","Desi hip-hop","Tamil film music","Arabic pop","Khaleeji","Mahraganat","Turkish pop","Arabesque","Persian pop","Greek laïko","Rebetiko","Balkan brass","Turbo-folk","Klezmer","Flamenco","Fado","Polka","Russian pop","Russian rock","Nordic folk","Scandi pop","Lo-fi","Study beats","Meditation","Sleep music","New age","Nature sounds","Spa music","Instrumental","Acoustic","Unplugged","Piano covers","A cappella","Children's music","Holiday music","Christmas","Easter worship","Wedding songs","Workout","Running","Party anthems","Road trip","Throwbacks","90s","80s","70s","60s","2000s","2010s"];
 for (const k in MOODS) MOODS[k].tracks = MOODS[k].tracks.map(s=>{const [title,artist]=s.split("|");return {title,artist};});
 
 /* ================= Local mood reading ================= */
+// [pattern, valence, energy, station, weight]
 const LEX = [
-  ["sad|down|blue|unhappy|low|gloomy|melanchol|grey|gray|rain", -.55,-.35,"rain"],
-  ["lonely|alone|isolat", -.6,-.4,"rain"],
-  ["cry|crying|tears", -.7,-.1,"heart"],
-  ["heartbr|broke up|break ?up|breakup|dumped|my ex|miss (him|her|them|you)|left me|cheat|rejected|ghosted|shouldn.?t", -.8,-.1,"heart"],
-  ["anxious|anxiety|nervous|worr|panic|stress|overwhelm|overthink|restless|racing|on edge", -.5,.5,"late"],
-  ["can.?t sleep|insomnia|awake|sleepless|3 ?am|mind won.?t", -.25,.25,"late"],
-  ["angry|mad\\b|furious|rage|pissed|annoyed|frustrat|hate|irritat|let it out", -.7,.85,"burn"],
-  ["focus|study|studying|work(ing)?\\b|coding|deadline|concentrat|lock in|productive|finish", .1,-.15,"focus"],
-  ["in love|crush|romantic|date|kiss|butterflies|cuddl|someone special|intimate", .6,0,"slow"],
-  ["calm|peace|content|relaxed|chill|grateful|thankful|cozy|cosy|mellow|serene|easy|lazy|sunday", .6,-.6,"gold"],
-  ["happy|good|great|glad|joy|cheer|smil|bright|wonderful|amazing|good news", .7,.35,null],
-  ["driv|road|car\\b|city lights|neon|cruis|night out|walk(ing)? home", .25,.4,"neon"],
-  ["confident|unstoppable|powerful|motivat|ready|boss|hyped|pumped|gym|workout|won\\b|win\\b|promot|proud|strong", .75,.75,"main"],
-  ["party|danc|club|celebrat|friday|weekend|turn up|euphori|ecstatic|excited|vibe", .85,.9,"party"],
-  ["nostalg|memor|remember|old days|childhood|homesick|bittersweet|reminisc|throwback|used to", -.05,-.3,"past"],
-  ["tired|exhaust|drained|burn(ed|t)? out|numb|sleepy|worn|running on|fumes|empty|meh|bored|heavy", -.5,-.8,"empty"],
-  ["hope|better|healing|okay|ok\\b|fine|alright", .3,0,null]
+  ["sad|unhappy|down bad|feeling down|\\bdown\\b|blue\\b|\\blow\\b|gloomy|melanchol|grey day|gray day|rain(y|ing)?\\b|lost\\b|empty inside|hopeless|lonely|alone|isolat|😢|🥺|☹️|😞|😔", -.6,-.35,"rain",1],
+  ["cry|crying|tears|😭", -.7,-.1,"heart",1],
+  ["heartbr|broke ?up|broken up|break ?up|dumped|my ex\\b|ex's|\\bex\\b|miss(ing)? (him|her|them|you|u)\\b|left me|cheat|rejected|ghosted|shouldn.?t|in my feelings|jealous|unrequited|situationship|💔|left on read", -.8,-.1,"heart",1.3],
+  ["anxious|anxiety|nervous|worr|panic|stress|overwhelm|overthink|restless|racing|on edge|scared|afraid|fear|uneasy|tense|pressure", -.5,.5,"late",1],
+  ["can.?t sleep|insomnia|awake|sleepless|3 ?am|2 ?am|4 ?am|mind won.?t|up late|still up|late night thoughts", -.25,.25,"late",1.2],
+  ["angry|\\bmad\\b|furious|rage|pissed|annoyed|frustrat|\\bhate\\b|irritat|let it out|scream|yell|punch|vex|fed up|sick of|livid|😡|🤬|😤", -.7,.85,"burn",1.3],
+  ["focus|study|studying|revis(e|ion|ing)|homework|assignment|\\bwork(ing)?\\b|coding|deadline|concentrat|lock(ed)? in|productive|grind|finish", .1,-.15,"focus",1],
+  ["in love|crush|romantic|date night|\\bdate\\b|kiss|butterflies|cuddl|someone special|intimate|\\bbae\\b|\\bbabe\\b|my (girl|guy|man|woman|boo)|🥰|😍|❤️|😘|love\\b", .6,0,"slow",1],
+  ["calm|peace|content|relaxed|relax|chill|grateful|thankful|blessed|cozy|cosy|mellow|serene|easy|lazy|sunday|slow morning|just vibes|good vibes|\\bvibes\\b|i.?m fine|\\bfine\\b|reading|tea\\b|sunset|🙏|😌", .6,-.6,"gold",1],
+  ["happy|\\bgood\\b|great|glad|joy|cheer|smil|bright|wonderful|amazing|good news|lovely|😊|😄|🙂|😁", .7,.35,null,.8],
+  ["driv|\\broad\\b|\\bcar\\b|city lights|neon|cruis|night out|walk(ing)? home|\\bride\\b|late night drive|\\bcity\\b", .25,.4,"neon",1],
+  ["confident|unstoppable|hype me|hype up|\\bhype\\b|powerful|motivat|ready|boss mode|like a boss|hyped|pumped|\\bgym\\b|workout|\\bwon\\b|\\bwin\\b|promot|proud|strong|cute|slay|that girl|main character|got the job|passed|💪|🔥|👑", .75,.75,"main",1],
+  ["party|danc|\\bclub|celebrat|friday|weekend|turn ?up|turnt|\\blit\\b|euphori|ecstatic|excited|vibing|owambe|e choke|jaiye|enjoy|birthday|🎉|🥳|💃|🕺|\\bouting\\b", .85,.9,"party",1.2],
+  ["nostalg|memor|remember|old days|childhood|homesick|missing home|bittersweet|reminisc|throwback|used to|back then|back in the day|miss(ing)? my (mom|mum|mother|dad|father|grand|nan|family|friends|home|country|village|school)|\\b(19|20)\\d\\d\\b", -.05,-.3,"past",1.4],
+  ["tired|exhaust|drained|burn(ed|t)? out|numb|sleepy|worn|running on|fumes|\\bempty\\b|\\bmeh\\b|bored|heavy|depress|feel nothing|feel(ing)? nothing|nothing matters|done with everything|hungover|not in the mood|don.?t feel like|no energy|😴|😩|🥱", -.5,-.8,"empty",1.1],
+  ["hope|better|healing|okay|\\bok\\b|alright|trying|positive", .3,0,null,.6]
 ];
-const CARE = /\b(kill myself|suicid|end it all|want to die|don.?t want to (live|be here)|self.?harm|hurt myself|no reason to live)/i;
+const POSITIVE = new Set(["gold","main","party","slow"]);
+const CARE = /\b(kill myself|suicid|end it all|want to die|don.?t want to (live|be here)|self.?harm|hurt myself|no reason to live|tired of (life|living)|better off without me)/i;
 
 function readLocal(text){
-  const t=" "+text.toLowerCase()+" "; let v=0,e=0,n=0; const votes={};
-  for (const [p,lv,le,mood] of LEX){
-    const re=new RegExp("\\b("+p+")","gi"); let m;
+  const t=" "+text.toLowerCase().replace(/[’`]/g,"'")+" ";
+  // words after "but"/"though" count for more: that's usually how the person really feels
+  const turn=Math.max(t.lastIndexOf(" but "),t.lastIndexOf(" though "),t.lastIndexOf(" yet "));
+  let v=0,e=0,w=0; const votes={};
+  for (const [p,lv,le,mood,weight] of LEX){
+    const re=new RegExp("("+p+")","giu"); let m;
     while((m=re.exec(t))){
-      const before=t.slice(Math.max(0,m.index-14),m.index);
-      if (/\b(not|never|no|isn.?t|don.?t|ain.?t|hardly)\s+(\w+\s+)?$/.test(before)){ v+=-lv*.6; e+=le*.5; n++; continue; }
-      v+=lv; e+=le; n++; if (mood) votes[mood]=(votes[mood]||0)+1;
+      if(m[0]==="") { re.lastIndex++; continue; }
+      const before=t.slice(Math.max(0,m.index-18),m.index);
+      let k=weight;
+      if (/\b(so|really|very|extremely|super|too|hella|mad|deeply|truly)\s+$/.test(before)) k*=1.4;
+      if (/\b(kinda|kind of|a bit|a little|slightly|lowkey|sorta|sort of)\s+$/.test(before)) k*=.7;
+      if (turn>=0 && m.index>turn) k*=1.5;
+      if (/\b(not|never|no|isn.?t|ain.?t|don.?t|hardly|not really|not feeling)\s+(\w+\s+)?$/.test(before)){
+        // "not happy" → low; "not sad" → roughly neutral
+        if (lv>0){ v+=-.5*k; e+=-.3*k; w+=k; votes.rain=(votes.rain||0)+k*.9; }
+        else { v+=.1*k; w+=k*.5; }
+        continue;
+      }
+      v+=lv*k; e+=le*k; w+=k; if (mood) votes[mood]=(votes[mood]||0)+k;
     }
   }
-  if (!n) return {v:0,e:-.2,votes:{},weak:true};
-  return {v:clamp(v/n),e:clamp(e/n),votes,weak:false};
+  if (!w) return {v:.15,e:-.3,votes:{gold:.5,past:.4},weak:true};
+  v=clamp(v/w); e=clamp(e/w);
+  // general "happy/good" words: send them to the nearest upbeat station
+  if (!Object.keys(votes).length && v>.4) votes[e>.5?"party":e>.1?"main":"gold"]=.5;
+  return {v,e,votes,weak:false};
 }
 function rankMoods(v,e,votes={}){
-  return Object.keys(MOODS).map(k=>{const m=MOODS[k];return {k,d:Math.hypot(m.v-v,m.e-e)-Math.min(.6,(votes[k]||0)*.3)};}).sort((a,b)=>a.d-b.d).map(x=>x.k);
+  const top=Math.max(0,...Object.values(votes));
+  return Object.keys(MOODS).map(k=>{const m=MOODS[k]; const d=Math.hypot(m.v-v,m.e-e); const vote=votes[k]||0;
+    return {k,d:d - (top? 1.2*vote/top : 0) - Math.min(.6,vote*.15)};}).sort((a,b)=>a.d-b.d).map(x=>x.k);
 }
 function rng(seed){return()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
 function shuffled(arr,r){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 
-function buildLocal({text,v,e,votes,mode,size=12,seed,care,source="text"}){
+function buildLocal({text,v,e,votes,mode,size=12,seed,care,source="text",avoid=[]}){
   const r=rng(seed); const order=rankMoods(v,e,votes); const primary=order[0], secondary=order[1];
-  const used=new Set(); const tracks=[];
-  const take=(k,note)=>{const t=shuffled(MOODS[k].tracks,r).find(t=>!used.has(t.title+t.artist)); if(!t) return false; used.add(t.title+t.artist); tracks.push({...t,note}); return true;};
+  const used=new Set(avoid.map(a=>a.toLowerCase())); const tracks=[];
+  const fresh=k=>{const f=MOODS[k].tracks.filter(t=>!used.has((t.title+" — "+t.artist).toLowerCase())); return f.length>=4?f:MOODS[k].tracks;};
+  const key=t=>(t.title+" — "+t.artist).toLowerCase();
+  const take=(k,note)=>{const t=shuffled(fresh(k),r).find(t=>!used.has(key(t))&&!tracks.some(x=>key(x)===key(t))); if(!t) return false; used.add(key(t)); tracks.push({...t,note}); return true;};
   if (mode==="lift" && !care){
     const target={v:Math.max(.7,Math.min(1,v+.9)),e:Math.max(.35,Math.min(.85,e+.6))};
     const stages=["Meeting you where you are","Sitting with it","Starting to turn","Picking up","Somewhere brighter"];
@@ -112,7 +135,7 @@ function buildLocal({text,v,e,votes,mode,size=12,seed,care,source="text"}){
   } else {
     const plan = care?["empty","rain","gold"]:[primary,secondary,order[2]];
     const counts=[Math.ceil(size*.6),Math.floor(size*.3)]; counts.push(size-counts[0]-counts[1]);
-    const lanes=plan.map((k,i)=>shuffled(MOODS[k].tracks,r).slice(0,counts[i]));
+    const lanes=plan.map((k,i)=>shuffled(fresh(k),r).slice(0,counts[i]));
     let a=0,b=0,c=0; const out=[];
     while(out.length<size && (a<lanes[0].length||b<lanes[1].length||c<lanes[2].length)){
       if(a<lanes[0].length) out.push(lanes[0][a++]);
@@ -120,24 +143,25 @@ function buildLocal({text,v,e,votes,mode,size=12,seed,care,source="text"}){
       if(b<lanes[1].length&&out.length<size) out.push(lanes[1][b++]);
       if(c<lanes[2].length&&out.length<size) out.push(lanes[2][c++]);
     }
-    out.forEach(t=>{if(!used.has(t.title+t.artist)){used.add(t.title+t.artist);tracks.push({...t,note:""});}});
+    out.forEach(t=>{if(!tracks.some(x=>key(x)===key(t))){tracks.push({...t,note:""});}});
   }
-  const key=care?"empty":primary, P=MOODS[key];
+  const mk=care?"empty":primary, P=MOODS[mk];
   let read=P.read;
   if (!care && secondary && (votes[secondary]||0)>0) read+=` There's some ${MOODS[secondary].name.toLowerCase()} in there too, so it's mixed in.`;
   if (mode==="lift" && !care) read+=" The list starts there and slowly climbs somewhere brighter.";
-  return {title:P.titles[Math.floor(r()*P.titles.length)],read,moodKey:key,v,e,tracks,mode,text,source,by:"local",care};
+  return {title:P.titles[Math.floor(r()*P.titles.length)],read,moodKey:mk,v,e,tracks,mode,text,source,by:"local",care};
 }
 
 /* ================= Claude reading (when allowed) ================= */
 const samplePromise=(window.claude&&window.claude.use)?window.claude.use("sample").catch(()=>null):Promise.resolve(null);
 let claudeOff=false;
-async function readWithClaude({text,mode,size,avoid=[]}){
+async function readWithClaude({text,mode,size,avoid=[],genre=""}){
   if (claudeOff) return null;
   const sample=await samplePromise; if(!sample) return null;
   const prompt=`You are the curator for After Hours, a late-night music discovery website. A listener described how they feel. Read their mood carefully, including mixed feelings, sarcasm and negation, then build a playlist.
 
 Listener wrote: """${text.replace(/"""/g,'"')}"""
+Genre: ${genre?genre+" (every song must genuinely belong to it)":"any, mix whatever fits"}
 Direction: ${mode==="lift"?"LIFT: start where they are emotionally, then gradually move toward a brighter, more energised place across the playlist.":"MATCH: stay with their mood and keep them company in it."}
 Number of tracks: ${size}
 ${avoid.length?"Do not include any of these songs: "+avoid.join("; "):""}
@@ -158,7 +182,7 @@ Reply with JSON only, in this shape:
       .map(t=>({title:t.title.trim(),artist:t.artist.trim(),note:typeof t.note==="string"?t.note.trim():""}));
     if(tracks.length<3) return null;
     const v=clamp(Number(out.valence)||0), e=clamp(Number(out.energy)||0);
-    return {title:String(out.title||"Tonight").slice(0,48),read:String(out.read||"").slice(0,280),moodKey:rankMoods(v,e)[0],v,e,tracks,mode,text,source:"text",by:"claude",care:!!out.care};
+    return {title:String(out.title||"Tonight").slice(0,48),read:String(out.read||"").slice(0,280),moodKey:rankMoods(v,e)[0],v,e,tracks,mode,text,genre,source:"text",by:"claude",care:!!out.care};
   }catch(err){ if(err&&err.code==="not_granted") claudeOff=true; return null; }
 }
 
@@ -193,12 +217,14 @@ const Sound={
     if (want && !this.ctx && !this.init()){ toast("Sound isn't supported in this browser"); return; }
     if (!this.ctx) return;
     const t=this.ctx.currentTime;
-    if (want){ try{await this.ctx.resume();}catch{} this.master.gain.cancelScheduledValues(t); this.master.gain.setTargetAtTime(.55,t,.5); this.on=true; this.next=this.ctx.currentTime+.1; }
+    if (want){ try{await this.ctx.resume();}catch{} this.master.gain.cancelScheduledValues(t); this.master.gain.setTargetAtTime(this.ducked?.06:.55,t,.5); this.on=true; this.next=this.ctx.currentTime+.1; }
     else { this.master.gain.cancelScheduledValues(t); this.master.gain.setTargetAtTime(0,t,.25); this.on=false; }
     document.body.classList.toggle("sound-on",this.on);
     $("#soundBtn").setAttribute("aria-pressed",this.on);
     $("#soundLabel").textContent=this.on?"Sound on":"Sound off";
   },
+  ducked:false,
+  duck(on){ if(this.ducked===on) return; this.ducked=on; if(!this.ctx||!this.on) return; const t=this.ctx.currentTime; this.master.gain.cancelScheduledValues(t); this.master.gain.setTargetAtTime(on?.06:.55,t,.3); },
   setMood(v,e,key){ this.mood={v,e,key}; if(this.ctx) this.apply(); },
   weather:{kind:"off"},
   wmod(){
@@ -482,7 +508,7 @@ const Visual=(()=>{
   function resize(){ W=innerWidth; H=innerHeight; renderer.setSize(W,H,false); camera.aspect=W/H; camera.updateProjectionMatrix();
     wide=W>920;
     const halfW=Math.tan(THREE.MathUtils.degToRad(17.5))*camera.position.z*camera.aspect;
-    base = wide ? {x:Math.min(2.25,halfW*.52),y:-.05,s:1,fade:1} : {x:0,y:Math.tan(THREE.MathUtils.degToRad(17.5))*camera.position.z*(1-2*165/H),s:.4,fade:.8};
+    base = wide ? {x:Math.min(2.25,halfW*.52),y:-.05,s:1,fade:1,edge:halfW*.95} : {x:0,y:Math.tan(THREE.MathUtils.degToRad(17.5))*camera.position.z*(1-2*165/H),s:.4,fade:.8};
     if (reduceMotion) draw(0);
   }
   addEventListener("resize",resize);
@@ -507,10 +533,10 @@ const Visual=(()=>{
 
     // scroll choreography: orb drifts aside and dims as you leave the hero
     const p=clamp(scrollY/(H*.9),0,1);
-    const sx=base.x+(wide?.6:0)*p, sy=base.y+(wide?.35:.5)*p, sc=base.s*(1-.18*p);
+    const sx=base.x+(wide?Math.max(.6,(base.edge||0)-base.x):0)*p, sy=base.y+(wide?.35:.5)*p, sc=base.s*(1-.18*p);
     rig.position.set(sx,sy,0); rig.scale.setScalar(sc);
-    U.uFade.value=base.fade*(1-.75*p);
-    barMat.opacity=.85*(1-.6*p); dust.material.opacity=.45*(1-.4*p);
+    U.uFade.value=base.fade*(1-(wide?.85:.75)*p);
+    barMat.opacity=.85*(1-(wide?.75:.6)*p); dust.material.opacity=.45*(1-.4*p);
 
     mouse.x=lerp(mouse.x,mouse.tx,reduceMotion?1:.05); mouse.y=lerp(mouse.y,mouse.ty,reduceMotion?1:.05);
     rig.rotation.y=mouse.x*.28-p*.35; rig.rotation.x=mouse.y*.18+p*.55;
@@ -609,16 +635,218 @@ function wrapText(c,text,x,y,maxW,lh){const words=String(text).split(/\s+/),line
 function $(s){return document.querySelector(s);}
 const resultEl=$("#result");
 let current=null, mode="match", busy=false;
-const sp=t=>"https://open.spotify.com/search/"+encodeURIComponent(t.title+" "+t.artist);
-const yt=t=>"https://www.youtube.com/results?search_query="+encodeURIComponent(t.title+" "+t.artist);
+const firstArtist=a=>String(a).split(/\s+(?:ft\.?|feat\.?|featuring|x)\s+|,|&/i)[0].trim();
+const sp=t=>"https://open.spotify.com/search/"+encodeURIComponent(t.title+" "+firstArtist(t.artist))+"/tracks";
+const yt=t=>"https://www.youtube.com/results?search_query="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
+const am=t=>t.tune&&t.tune.src!=="deezer"&&t.tune.url?t.tune.url:"https://music.apple.com/us/search?term="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
 const esc=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 const goTo=el=>el.scrollIntoView({behavior:reduceMotion?"auto":"smooth",block:"start"});
+const timeout=ms=>(window.AbortSignal&&AbortSignal.timeout)?AbortSignal.timeout(ms):undefined;
 
 function applyMood(pl){ Visual.setMood(pl.v,pl.e); Sound.setMood(pl.v,pl.e,pl.moodKey); }
 
+/* ================= Songs: check each one against Apple's catalogue =================
+   Gives every track a 30-second preview, cover art and an exact Apple Music link.
+   Songs the catalogue can't find are dropped from AI playlists (no made-up songs). */
+const Tunes={
+  cache:null, blockedUntil:0, KEY:"afterhours.tunes", WEEK:7*864e5,
+  load(){ if(this.cache) return; try{ this.cache=JSON.parse(localStorage.getItem(this.KEY))||{}; }catch{ this.cache={}; } },
+  persist(){ try{ const ks=Object.keys(this.cache); if(ks.length>500) ks.slice(0,ks.length-500).forEach(k=>delete this.cache[k]); localStorage.setItem(this.KEY,JSON.stringify(this.cache)); }catch{} },
+  id:t=>(t.title+"|"+t.artist).toLowerCase(),
+  norm:s=>String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/\(.*?\)|\[.*?\]/g," ").replace(/\s-\s.*$/,"").replace(/\b(feat|ft|featuring)\b.*$/,"").replace(/&/g," and ").replace(/[^a-z0-9]+/g," ").trim(),
+  forget(t){ this.load(); delete this.cache[this.id(t)]; this.persist(); },
+  // pick the best match from a list of {title, artist, preview}; originals beat remixes, live versions and covers
+  pick(t,list){
+    const nt=this.norm(t.title), na=this.norm(firstArtist(t.artist));
+    const junk=/karaoke|tribute|made famous|originally performed|in the style of|lullaby|8-bit|music box|ringtone|\bcover\b/i;
+    const alt=/remix|\bmix\b|mixed|extended|edit\b|sped up|slowed|live|acoustic|instrumental|version|demo/i;
+    const wantAlt=alt.test(t.title);
+    let best=null, score=-1e9;
+    for(const x of list){
+      if(junk.test(x.title+" "+x.artist+" "+(x.album||""))) continue;
+      const xt=this.norm(x.title), xa=this.norm(x.artist);
+      const titleOK= xt===nt || (nt.length>3 && (xt.startsWith(nt) || nt.startsWith(xt)));
+      const artistOK= !!na && (xa.includes(na) || na.includes(xa));
+      if(!titleOK || !artistOK) continue;
+      const s=(xt===nt?4:1)+(x.preview?2:0)-(!wantAlt&&alt.test(x.title)?3:0);
+      if(s>score){ score=s; best=x; best._alt=!wantAlt&&alt.test(x.title); }
+    }
+    return best;
+  },
+  async apple(t){
+    const r=await fetch("https://itunes.apple.com/search?media=music&entity=song&limit=25&term="+encodeURIComponent(t.title+" "+firstArtist(t.artist)),{signal:timeout(8000)});
+    if(r.status===403||r.status===429){ this.blockedUntil=Date.now()+45000; throw new Error("rate"); }
+    if(!r.ok) throw new Error("http");
+    const j=await r.json();
+    const list=(j.results||[]).filter(x=>x.kind==="song").map(x=>({title:x.trackName||"",artist:x.artistName||"",album:x.collectionName||"",preview:x.previewUrl||"",
+      art:(x.artworkUrl100||"").replace(/\/\d+x\d+bb\./,"/200x200bb."),url:x.trackViewUrl||"",id:x.trackId,src:"apple"}));
+    return this.pick(t,list);
+  },
+  // Deezer has songs Apple's catalogue is missing (lots of Ghanaian and Nigerian music). JSONP, no key.
+  deezer(t){
+    return new Promise(res=>{
+      const cb="__dz"+Math.random().toString(36).slice(2), s=document.createElement("script");
+      const done=v=>{ clearTimeout(timer); try{ delete window[cb]; }catch{ window[cb]=undefined; } s.remove(); res(v); };
+      const timer=setTimeout(()=>done(undefined),8000);
+      window[cb]=d=>{ if(!d||d.error) return done(undefined);
+        const list=(d.data||[]).map(x=>({title:x.title||"",artist:(x.artist&&x.artist.name)||"",album:(x.album&&x.album.title)||"",preview:x.preview||"",
+          art:(x.album&&(x.album.cover_medium||x.album.cover))||"",url:x.link||"",id:"dz"+x.id,src:"deezer"}));
+        done(this.pick(t,list)||null); };
+      s.onerror=()=>done(undefined);
+      s.src="https://api.deezer.com/search?output=jsonp&limit=25&callback="+cb+"&q="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
+      document.head.appendChild(s);
+    });
+  },
+  // resolves to: object (found), null (not in Apple Music or Deezer), undefined (couldn't check right now)
+  async find(t){
+    this.load(); const k=this.id(t), c=this.cache[k];
+    if(c!==undefined && (c===null || Date.now()-(c.at||0)<(c.src==="deezer"?6*36e5:this.WEEK))) return c;
+    let hit, appleFailed=false;
+    if(Date.now()>=this.blockedUntil){ try{ hit=await this.apple(t); }catch{ appleFailed=true; } } else appleFailed=true;
+    if(!hit){ const d=await this.deezer(t); if(d) hit=d; else if(d===undefined && appleFailed) return undefined; }
+    else if(hit._alt){ const d=await this.deezer(t); if(d && !d._alt) hit=d; }   // Apple only had a remix or live version
+    const out=hit?{id:hit.id,title:hit.title,artist:hit.artist,art:hit.art,preview:hit.preview,url:hit.url,src:hit.src,at:Date.now()}:null;
+    this.cache[k]=out; this.persist(); return out;
+  },
+  // check many songs, a few at a time
+  async findAll(tracks,{each,limit=4,budget=9000}={}){
+    let i=0; const stopAt=Date.now()+budget;
+    const work=async()=>{ while(i<tracks.length && Date.now()<stopAt){ const t=tracks[i++]; if(t.tune!==undefined) continue; const f=await this.find(t); if(f!==undefined) t.tune=f; each&&each(t); } };
+    await Promise.all(Array.from({length:limit},work));
+  }
+};
+
+/* Songs this browser has already been given, so new playlists don't repeat them */
+const Heard={
+  KEY:"afterhours.heard",
+  get(){ try{ return JSON.parse(localStorage.getItem(this.KEY))||[]; }catch{ return []; } },
+  add(tracks){ const l=this.get(), s=new Set(l.map(x=>x.toLowerCase()));
+    tracks.forEach(t=>{ const k=t.title+" — "+t.artist; if(!s.has(k.toLowerCase())){ l.push(k); s.add(k.toLowerCase()); } });
+    try{ localStorage.setItem(this.KEY,JSON.stringify(l.slice(-240))); }catch{} }
+};
+
+/* ================= AI curator (Netlify Function → Gemini) ================= */
+let aiOff=location.protocol==="file:";
+async function readWithAI({text,mode,genre,avoid}){
+  if(aiOff) return null;
+  try{
+    const r=await fetch("/api/playlist",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({text,mode,genre,avoid:avoid.slice(-80),count:16}),signal:timeout(28000)});
+    if(r.status===404||r.status===405||r.status===503){ aiOff=true; return null; }
+    if(!r.ok) return null;
+    const o=await r.json(); if(!o||!Array.isArray(o.tracks)||o.tracks.length<4) return null;
+    const v=clamp(+o.valence||0), e=clamp(+o.energy||0);
+    return {title:String(o.title||"Tonight").slice(0,48),read:String(o.read||"").slice(0,280),moodKey:rankMoods(v,e)[0],v,e,
+      tracks:o.tracks.map(t=>({title:String(t.title),artist:String(t.artist),note:String(t.note||"")})),mode,text,genre,source:"text",by:"ai",care:!!o.care};
+  }catch{ return null; }
+}
+
+/* Keep only real songs; cap at 12 */
+async function verify(pl,size=12){
+  await Tunes.findAll(pl.tracks,{budget:10000});
+  const known=pl.tracks.filter(t=>t.tune!==null);           // drop songs Apple Music says don't exist
+  const seen=new Set(), out=[];
+  for(const t of known){ const k=t.tune?String(t.tune.id):(t.title+t.artist).toLowerCase(); if(seen.has(k)) continue; seen.add(k); out.push(t); if(out.length>=size) break; }
+  if(out.length<6) return null;
+  pl.tracks=out; return pl;
+}
+
+/* Without the AI: real songs from the chosen genre, straight from Apple's catalogue */
+async function genreLocal({text,genre,mode,v,e,votes,avoid,size=12}){
+  const words=MOODS[rankMoods(v,e,votes)[0]].tags.split(" · ")[0];
+  const pull=async term=>{ try{ const r=await fetch("https://itunes.apple.com/search?media=music&entity=song&limit=100&term="+encodeURIComponent(term),{signal:timeout(9000)}); if(!r.ok) return []; return (await r.json()).results||[]; }catch{ return []; } };
+  const [a,b]=await Promise.all([pull(genre),pull(genre+" "+words)]);
+  const g=Tunes.norm(genre).split(" ").filter(w=>w.length>2);
+  const heard=new Set(avoid.map(x=>x.toLowerCase()));
+  let pool=[...b,...a].filter(x=>x.kind==="song"&&x.previewUrl);
+  const tagged=pool.filter(x=>g.some(w=>Tunes.norm(x.primaryGenreName||"").includes(w)));
+  if(tagged.length>=size) pool=tagged;
+  const r=rng(Date.now()%1e6), per={}, out=[], ids=new Set();
+  for(const x of shuffled(pool,r)){
+    const k=(x.trackName+" — "+x.artistName).toLowerCase();
+    if(ids.has(x.trackId)||heard.has(k)||(per[x.artistName]||0)>=2) continue;
+    ids.add(x.trackId); per[x.artistName]=(per[x.artistName]||0)+1;
+    out.push({title:x.trackName,artist:x.artistName,note:"",tune:{id:x.trackId,title:x.trackName,artist:x.artistName,art:(x.artworkUrl100||"").replace(/\/\d+x\d+bb\./,"/200x200bb."),preview:x.previewUrl,url:x.trackViewUrl,at:Date.now()}});
+    if(out.length>=size) break;
+  }
+  if(out.length<6) return null;
+  const P=MOODS[rankMoods(v,e,votes)[0]];
+  return {title:genre.replace(/\b\w/g,c=>c.toUpperCase())+" Tonight",read:P.read+` All ${genre}.`,moodKey:rankMoods(v,e,votes)[0],v,e,tracks:out,mode,text,genre,source:"text",by:"genre",care:false};
+}
+
+/* ================= Preview player ================= */
+const ICON={play:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>',
+  pause:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>',
+  prev:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5.5v13L9.5 12z" fill="currentColor"/></svg>',
+  next:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5.5v13L14.5 12z" fill="currentColor"/></svg>',
+  load:'<svg viewBox="0 0 24 24" aria-hidden="true" class="spin"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-dasharray="30 60" stroke-linecap="round"/></svg>'};
+const Player={
+  a:new Audio(), pl:null, i:-1, loading:false, retried:false,
+  init(){
+    const a=this.a; a.preload="none";
+    a.addEventListener("ended",()=>this.next(true));
+    a.addEventListener("timeupdate",()=>{ $("#plProg").style.transform=`scaleX(${a.duration?a.currentTime/a.duration:0})`; });
+    a.addEventListener("play",()=>this.sync()); a.addEventListener("pause",()=>this.sync());
+    a.addEventListener("error",()=>this.failed());
+    $("#plPlay").onclick=()=>this.toggle(); $("#plNext").onclick=()=>this.next(); $("#plPrev").onclick=()=>this.prev();
+    $("#plClose").onclick=()=>this.stop();
+    $("#plPrev").innerHTML=ICON.prev; $("#plNext").innerHTML=ICON.next;
+    if("IntersectionObserver" in window){ new IntersectionObserver(es=>{ this.nearForm=es[0].isIntersecting; this.tuck(); },{threshold:.25}).observe($("#ask")); }
+    if("mediaSession" in navigator){ try{
+      navigator.mediaSession.setActionHandler("nexttrack",()=>this.next());
+      navigator.mediaSession.setActionHandler("previoustrack",()=>this.prev());
+    }catch{} }
+  },
+  nearForm:false,
+  tuck(){ $("#player").classList.toggle("tuck",this.nearForm && !this.playing() && !this.loading); },
+  playing(){ return !this.a.paused && !this.a.ended; },
+  async play(i,auto=false){
+    if(!current) return; this.pl=current;
+    const t=current.tracks[i]; if(!t) return this.stop();
+    this.i=i; this.loading=true; this.retried=false; this.a.pause(); this.show(t); this.sync();
+    if(t.tune===undefined){ const f=await Tunes.find(t); if(f!==undefined) t.tune=f; paintRow(i); }
+    if(this.pl!==current || this.i!==i) return;           // user moved on
+    this.loading=false;
+    if(!t.tune||!t.tune.preview){
+      if(auto) return this.next(true);
+      this.sync(); toast(t.tune===undefined?"Couldn't reach previews right now. Try again in a minute.":"No preview for this song. Open it in Apple Music, Spotify or YouTube.");
+      return;
+    }
+    this.show(t); this.a.src=t.tune.preview;
+    try{ await this.a.play(); }catch{ this.sync(); }
+  },
+  async failed(){
+    const t=this.pl&&this.pl.tracks[this.i]; if(!t||this.retried) return this.next(true);
+    this.retried=true; Tunes.forget(t); t.tune=undefined; const f=await Tunes.find(t); if(f){ t.tune=f; this.a.src=f.preview; try{ await this.a.play(); }catch{} } else this.next(true);
+  },
+  toggle(){ if(this.i<0) return this.play(0); if(this.playing()) this.a.pause(); else this.a.play().catch(()=>{}); },
+  next(auto=false){ if(!this.pl) return; const n=this.i+1; if(n>=this.pl.tracks.length){ this.a.pause(); this.a.currentTime=0; this.sync(); return; } this.play(n,auto); },
+  prev(){ if(!this.pl) return; if(this.a.currentTime>3){ this.a.currentTime=0; return; } this.play(Math.max(0,this.i-1)); },
+  stop(){ this.a.pause(); this.a.removeAttribute("src"); this.i=-1; this.pl=null; $("#player").classList.remove("show"); document.body.classList.remove("has-player"); this.sync(); },
+  show(t){
+    const p=$("#player"); p.classList.add("show"); document.body.classList.add("has-player");
+    $("#plTitle").textContent=t.tune?t.tune.title:t.title; $("#plArtist").textContent=t.tune?t.tune.artist:t.artist;
+    const art=$("#plArt"); art.style.backgroundImage=t.tune&&t.tune.art?`url("${t.tune.art}"),linear-gradient(135deg,#3a2a1c,#16131a)`:"";
+    const dz=t.tune&&t.tune.src==="deezer"; $("#plOpen").href=dz?t.tune.url:am(t); $("#plOpen").firstChild.nodeValue=dz?"Open in Deezer ":"Open in Apple Music "; $("#plProg").style.transform="scaleX(0)";
+    if("mediaSession" in navigator && window.MediaMetadata){ try{ navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:t.artist,album:"After Hours",artwork:t.tune&&t.tune.art?[{src:t.tune.art,sizes:"200x200",type:"image/jpeg"}]:[]}); }catch{} }
+  },
+  sync(){
+    const on=this.playing(), busy=this.loading; this.tuck();
+    $("#plPlay").innerHTML=busy?ICON.load:on?ICON.pause:ICON.play; $("#plPlay").setAttribute("aria-label",on?"Pause preview":"Play preview");
+    Sound.duck(on||busy);
+    document.querySelectorAll("#trackList .track").forEach((li,j)=>{
+      const me=this.pl===current && j===this.i;
+      li.classList.toggle("playing",me&&(on||busy));
+      const b=li.querySelector(".pv-ic"); if(b) b.innerHTML=me&&busy?ICON.load:me&&on?ICON.pause:ICON.play;
+      const btn=li.querySelector(".pv"); if(btn) btn.setAttribute("aria-label",(me&&on?"Pause ":"Preview ")+(current.tracks[j]?current.tracks[j].title:""));
+    });
+    const pf=$("#playFirst"); if(pf) pf.innerHTML=(this.pl===current&&on)?`${ICON.pause}<span>Pause preview</span>`:`${ICON.play}<span>Play previews</span>`;
+  }
+};
+
+/* ================= Playlist view ================= */
 function render(pl,{example=false,animate=true}={}){
   current=pl; const m=MOODS[pl.moodKey];
-  const label=example?"Example night":(pl.source==="station"?"Station · "+m.freq+" FM":"Your playlist");
+  const label=example?"Example night":"Your playlist";
   resultEl.innerHTML=`
     <p class="eyebrow label"><span class="dot"></span>${esc(label)}${example?' · "'+esc(pl.text)+'"':""}</p>
     ${pl.care?`<div class="care"><p>That sounds really heavy, and you don't have to carry it alone tonight. If you might hurt yourself, please reach out to someone you trust or a crisis line near you. You can find one at <a href="https://findahelpline.com" target="_blank" rel="noopener">findahelpline.com</a>.</p></div>`:""}
@@ -627,62 +855,82 @@ function render(pl,{example=false,animate=true}={}){
       <div>
         <h2>${esc(pl.title)}</h2>
         <p class="read">${esc(pl.read)}</p>
-        <div class="meta"><span><b>${pl.tracks.length}</b> tracks</span><span>Mood: <b>${esc(m.name)}</b></span><span>${pl.mode==="lift"?"Lifts you up":"Stays with you"}</span>${savedName()?`<span>Picked by <b>${esc(savedName())}</b></span>`:""}</div>
+        <div class="meta"><span><b>${pl.tracks.length}</b> songs</span>${pl.genre?`<span>Genre: <b>${esc(pl.genre)}</b></span>`:`<span>Mood: <b>${esc(m.name)}</b></span>`}<span>${pl.mode==="lift"?"Lifts you up":"Stays with you"}</span>${savedName()?`<span>Picked by <b>${esc(savedName())}</b></span>`:""}</div>
         <div class="actions">
-          <a class="go" id="playFirst" href="${pl.tracks[0]?sp(pl.tracks[0]):"#stations"}" target="_blank" rel="noopener">Play first track <span aria-hidden="true">↗</span></a>
-          <button class="ghost" id="again" type="button">Try another mix</button>
-          <button class="ghost" id="copy" type="button">Copy tracklist</button>
+          <button class="go" id="playFirst" type="button">${ICON.play}<span>Play previews</span></button>
+          <button class="ghost" id="again" type="button"><span aria-hidden="true">↻</span> Different playlist</button>
+          <button class="ghost" id="copy" type="button">Copy list</button>
         </div>
       </div>
     </div>
-    <ol class="tracks" id="trackList">${pl.tracks.map((t,i)=>trackRow(t,i,animate)).join("")}</ol>`;
+    <ol class="tracks" id="trackList">${pl.tracks.map((t,i)=>trackRow(t,i,animate)).join("")}</ol>
+    <p class="credit">Previews from Apple Music and Deezer. Each song also opens in Apple Music, Spotify or YouTube.</p>`;
   drawCover($("#cover"),pl);
   setTimeout(()=>{ const sl=$("#sleeve"); if(sl) sl.classList.add("out"); },animate?120:0);
   $("#again").onclick=remix; $("#copy").onclick=copyList;
-  $("#trackList").onclick=e=>{const b=e.target.closest("button[data-rm]"); if(!b) return; current.tracks.splice(+b.dataset.rm,1); render(current,{animate:false}); save(current);};
+  $("#playFirst").onclick=()=>{ if(Player.pl===current&&Player.i>=0) Player.toggle(); else Player.play(0); };
+  $("#trackList").onclick=e=>{
+    const p=e.target.closest("button[data-play]");
+    if(p){ const i=+p.dataset.play; if(Player.pl===current&&Player.i===i) Player.toggle(); else Player.play(i); return; }
+    const b=e.target.closest("button[data-rm]"); if(!b) return;
+    const i=+b.dataset.rm; if(Player.pl===current){ if(Player.i===i) Player.stop(); else if(Player.i>i) Player.i--; }
+    current.tracks.splice(i,1); render(current,{animate:false}); save(current);
+  };
+  Player.sync();
 }
 function trackRow(t,i,animate){
-  return `<li class="track${animate?" enter":""}" style="animation-delay:${animate?i*55:0}ms">
-    <div><span class="t-title">${esc(t.title)}</span><span class="t-artist">${esc(t.artist)}</span>${t.note?`<span class="t-note">${esc(t.note)}</span>`:""}</div>
+  const u=t.tune, title=u?u.title:t.title, artist=u?u.artist:t.artist;
+  return `<li class="track${animate?" enter":""}" style="animation-delay:${animate?i*45:0}ms">
+    <button class="pv" type="button" data-play="${i}" aria-label="Preview ${esc(title)}"><span class="pv-art"${u&&u.art?` style="background-image:url('${esc(u.art)}'),linear-gradient(135deg,#3a2a1c,#16131a)"`:""}></span><span class="pv-ic">${ICON.play}</span></button>
+    <div class="t-main"><span class="t-title">${esc(title)}</span><span class="t-artist">${esc(artist)}</span>${t.note?`<span class="t-note">${esc(t.note)}</span>`:""}</div>
     <div class="t-links">
-      <a href="${sp(t)}" target="_blank" rel="noopener" aria-label="Find ${esc(t.title)} on Spotify">Spotify</a>
-      <a href="${yt(t)}" target="_blank" rel="noopener" aria-label="Find ${esc(t.title)} on YouTube">YouTube</a>
-      <button type="button" data-rm="${i}" aria-label="Remove ${esc(t.title)}" title="Remove">×</button>
+      <a href="${esc(am(t))}" target="_blank" rel="noopener" aria-label="Open ${esc(title)} in Apple Music">Apple Music</a>
+      <a href="${esc(sp(t))}" target="_blank" rel="noopener" aria-label="Find ${esc(title)} on Spotify">Spotify</a>
+      <a href="${esc(yt(t))}" target="_blank" rel="noopener" aria-label="Find ${esc(title)} on YouTube">YouTube</a>
+      <button type="button" class="rm" data-rm="${i}" aria-label="Remove ${esc(title)}" title="Remove">×</button>
     </div></li>`;
 }
+function paintRow(i){
+  const li=document.querySelectorAll("#trackList .track")[i], t=current&&current.tracks[i]; if(!li||!t) return;
+  const tmp=document.createElement("ol"); tmp.innerHTML=trackRow(t,i,false); li.replaceWith(tmp.firstElementChild); Player.sync();
+}
+function currentGenre(){ return ($("#genre").value||"").trim().slice(0,60); }
 
 async function generate(text,opts={}){
-  if(busy) return; busy=true; $("#go").disabled=true;
-  const size=12, care=CARE.test(text);
-  resultEl.innerHTML=`<p class="eyebrow label"><span class="dot"></span>Your playlist</p><div class="status"><span class="eq"><i></i><i></i><i></i><i></i></span>${esc(capFirst(orbName()))} is tuning in to how you feel…</div>`;
+  if(busy) return; busy=true; $("#go").disabled=true; const again=$("#again"); if(again) again.disabled=true;
+  const size=12, care=CARE.test(text), genre=opts.genre!==undefined?opts.genre:currentGenre();
+  const say=msg=>{ resultEl.innerHTML=`<p class="eyebrow label"><span class="dot"></span>Your playlist</p><div class="status"><span class="eq"><i></i><i></i><i></i><i></i></span>${msg}</div>`; };
+  say(`${esc(capFirst(orbName()))} is tuning in to how you feel…`);
   Visual.pulse(true); goTo(resultEl);
-  let pl=care?null:await readWithClaude({text,mode,size,avoid:opts.avoid||[]});
+  const avoid=[...(opts.avoid||[]),...Heard.get().slice(-60)];
+  let pl=null;
+  if(!care){
+    pl=await readWithClaude({text,mode,size:16,avoid,genre}) || await readWithAI({text,mode,genre,avoid});
+    if(pl){ say("Finding previews and checking every song…"); pl=await verify(pl,size); }
+  }
+  const r=readLocal(text);
+  if(!pl && genre && !care){ say(`Finding ${esc(genre)} songs…`); pl=await genreLocal({text,genre,mode,v:r.v,e:r.e,votes:r.votes,avoid,size}); if(!pl) toast(`Couldn't find enough ${genre} songs right now, so here's a mix`); }
   if(!pl){
-    const r=readLocal(text);
-    pl=buildLocal({text,v:r.v,e:r.e,votes:r.votes,mode,size,seed:opts.seed??Date.now()%100000,care});
+    pl=buildLocal({text,v:r.v,e:r.e,votes:r.votes,mode,size,seed:Math.floor(Math.random()*1e6),care,avoid});
     if(r.weak&&!care) pl.read="That's hard to place, so here's a gentle middle ground. Add a few words about how you feel for a closer match.";
   }
-  pl.care=pl.care||care;
-  Visual.pulse(false); render(pl); applyMood(pl); save(pl);
+  pl.care=pl.care||care; if(genre&&pl.by!=="local") pl.genre=genre;
+  Visual.pulse(false); render(pl); applyMood(pl); save(pl); Heard.add(pl.tracks);
   $("#go").disabled=false; busy=false;
+  // fill in cover art and previews for any songs not checked yet
+  const mine=pl; Tunes.findAll(pl.tracks.filter(t=>t.tune===undefined),{limit:3,budget:20000,each:t=>{ if(current===mine) paintRow(mine.tracks.indexOf(t)); }}).then(()=>{ if(current===mine) save(mine); });
 }
 function remix(){
   if(!current) return;
-  if(current.source==="station"){ playStation(current.moodKey); return; }
-  generate(current.text,{avoid:current.tracks.map(t=>t.title+" by "+t.artist),seed:Math.floor(Math.random()*1e6)});
-}
-function playStation(k){
-  const m=MOODS[k];
-  const pl=buildLocal({text:m.name,v:m.v,e:m.e,votes:{[k]:3},mode,size:12,seed:Math.floor(Math.random()*1e6)});
-  pl.source="station"; render(pl); applyMood(pl); save(pl); goTo(resultEl);
+  generate(current.text,{genre:current.genre||"",avoid:current.tracks.map(t=>t.title+" — "+t.artist)});
 }
 async function copyList(){
   const p=current; if(!p) return;
   const txt=`${p.title} · After Hours\n${p.read}\n\n`+p.tracks.map((t,i)=>`${i+1}. ${t.title} – ${t.artist}`).join("\n");
-  try{ await navigator.clipboard.writeText(txt); toast("Tracklist copied"); }catch{ toast("Couldn't copy. Select the list and copy it manually."); }
+  try{ await navigator.clipboard.writeText(txt); toast("List copied"); }catch{ toast("Couldn't copy. Select the list and copy it manually."); }
 }
 let toastTimer;
-function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200);}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2600);}
 
 /* Saved nights (this browser only) */
 const KEY="afterhours.nights";
@@ -695,7 +943,7 @@ function save(pl){
 function renderSaved(){
   const list=loadSaved(), el=$("#savedList");
   if(!list.length){ el.innerHTML=`<p class="empty-note">Nothing yet. Your playlists will show up here.</p>`; return; }
-  el.innerHTML=list.map((p,i)=>`<button type="button" data-i="${i}"><canvas data-c="${i}"></canvas><span><strong>${esc(p.title)}</strong><br><small>${esc(MOODS[p.moodKey]?.name||"")} · ${p.tracks.length} tracks</small></span><small>${timeAgo(p.at)}</small></button>`).join("");
+  el.innerHTML=list.map((p,i)=>`<button type="button" data-i="${i}"><canvas data-c="${i}"></canvas><span><strong>${esc(p.title)}</strong><br><small>${esc(p.genre||MOODS[p.moodKey]?.name||"")} · ${p.tracks.length} songs</small></span><small>${timeAgo(p.at)}</small></button>`).join("");
   list.forEach((p,i)=>drawCover(el.querySelector(`[data-c="${i}"]`),p,48));
   el.onclick=e=>{const b=e.target.closest("button[data-i]"); if(!b) return; const p=list[+b.dataset.i]; render(p); applyMood(p); goTo(resultEl);};
 }
@@ -707,13 +955,6 @@ function timeAgo(t){const m=Math.round((Date.now()-t)/60000);if(m<1)return"just 
   b.onclick=()=>{ $("#feeling").value=t; generate(t); }; $("#tries").appendChild(b);
 });
 
-const stationEl=$("#stationList");
-stationEl.innerHTML=Object.keys(MOODS).map((k,i)=>`<li><button class="station" type="button" data-k="${k}"><span class="n">${String(i+1).padStart(2,"0")}</span><span class="name">${MOODS[k].name}</span><span class="tags">${MOODS[k].tags}</span><span class="f">${MOODS[k].freq} FM</span></button></li>`).join("");
-stationEl.addEventListener("click",e=>{const b=e.target.closest("button[data-k]"); if(b) playStation(b.dataset.k);});
-stationEl.addEventListener("pointerover",e=>{const b=e.target.closest("button[data-k]"); if(b){const m=MOODS[b.dataset.k]; Visual.preview(m.v,m.e);}});
-stationEl.addEventListener("pointerleave",()=>Visual.release());
-stationEl.addEventListener("focusin",e=>{const b=e.target.closest("button[data-k]"); if(b){const m=MOODS[b.dataset.k]; Visual.preview(m.v,m.e);}});
-stationEl.addEventListener("focusout",()=>Visual.release());
 
 function setMode(m){mode=m;$("#mode-match").setAttribute("aria-pressed",m==="match");$("#mode-lift").setAttribute("aria-pressed",m==="lift");}
 $("#mode-match").onclick=()=>setMode("match"); $("#mode-lift").onclick=()=>setMode("lift");
@@ -829,6 +1070,15 @@ $("#setForm").addEventListener("submit",e=>{
   toast(name?`Say hi to ${name}`:"Settings saved");
 });
 applyName(); Weather.start();
+
+// genre picker: type to search, or leave empty for any genre
+$("#genreList").innerHTML=GENRES.map(g=>`<option value="${esc(g)}"></option>`).join("");
+$("#genre").value=store.get("afterhours.genre","");
+const syncGenre=()=>{ const g=currentGenre(); $("#genreWrap").classList.toggle("set",!!g); store.set("afterhours.genre",g); };
+$("#genre").addEventListener("change",syncGenre); $("#genre").addEventListener("input",()=>$("#genreWrap").classList.toggle("set",!!currentGenre()));
+$("#genreClear").onclick=()=>{ $("#genre").value=""; syncGenre(); $("#genre").focus(); };
+$("#genreWrap").classList.toggle("set",!!currentGenre());
+Player.init();
 
 // open in a working state with a clearly marked example
 const ex="Rainy evening, a bit lonely but okay", exR=readLocal(ex);

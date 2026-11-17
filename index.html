@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>After Hours</title>
-<meta name="description" content="Describe how you feel and After Hours builds a playlist to match your mood, or lift you out of it.">
+<meta name="description" content="Describe how you feel and After Hours builds a fresh playlist to match your mood, in any genre, with previews of every song.">
 <meta name="theme-color" content="#121014">
 <meta property="og:type" content="website">
 <meta property="og:title" content="After Hours">
@@ -60,12 +60,11 @@
 </header>
 
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
-  <div class="wrap">
-    <button class="pill close" id="menuClose" type="button">Close</button>
+  <div class="wrap menu-bar"><button class="pill close" id="menuClose" type="button">Close</button></div>
+  <div class="wrap menu-body">
     <ol>
       <li><a href="#start">Make a playlist</a></li>
       <li><a href="#how">How it works</a></li>
-      <li><a href="#stations">Stations</a></li>
       <li><a href="#saved">Your nights</a></li>
       <li><a href="#settings" id="menuSettings">Settings</a></li>
     </ol>
@@ -85,9 +84,18 @@
           <label for="feeling">Describe how you feel</label>
           <textarea id="feeling" maxlength="500" placeholder="e.g. Long day, a little lonely, but the rain outside is kind of nice…"></textarea>
           <div class="ask-bar">
-            <div class="toggle" role="group" aria-label="Playlist direction">
-              <button type="button" id="mode-match" aria-pressed="true">Stay with it</button>
-              <button type="button" id="mode-lift" aria-pressed="false">Lift me up</button>
+            <div class="ask-opts">
+              <div class="toggle" role="group" aria-label="Playlist direction">
+                <button type="button" id="mode-match" aria-pressed="true">Stay with it</button>
+                <button type="button" id="mode-lift" aria-pressed="false">Lift me up</button>
+              </div>
+              <div class="genre" id="genreWrap">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17.5a3 3 0 1 1-2-2.83V5l11-2v11.5a3 3 0 1 1-2-2.83V6.4L9 7.7z" fill="currentColor"/></svg>
+                <label for="genre" class="sr-only">Genre (optional)</label>
+                <input id="genre" list="genreList" maxlength="60" autocomplete="off" spellcheck="false" placeholder="Any genre">
+                <button type="button" id="genreClear" aria-label="Clear genre">×</button>
+                <datalist id="genreList"></datalist>
+              </div>
             </div>
             <button class="go" id="go" type="submit">Make my playlist <span aria-hidden="true">→</span></button>
           </div>
@@ -107,24 +115,14 @@
       <p class="big">Tell it how tonight feels. It <em>answers in songs.</em></p>
       <div class="steps">
         <div><span class="label">01</span><b>Describe it</b><p>Write a sentence, a word, or a mess of feelings. All of it counts.</p></div>
-        <div><span class="label">02</span><b>Pick a direction</b><p>Stay with the mood, or start there and climb somewhere brighter.</p></div>
-        <div><span class="label">03</span><b>Press play</b><p>Every track opens on Spotify or YouTube. Copy the list, keep the night.</p></div>
+        <div><span class="label">02</span><b>Pick a direction</b><p>Stay with the mood or climb somewhere brighter. Add a genre if you want one, from Afrobeats to Zouk.</p></div>
+        <div><span class="label">03</span><b>Press play</b><p>Preview every song right here, then open it in Apple Music, Spotify or YouTube. Not feeling it? Get a different playlist.</p></div>
       </div>
     </section>
   </div>
 
   <div class="wrap">
     <section class="result" id="result" aria-live="polite"></section>
-  </div>
-
-  <div class="wrap">
-    <section id="stations" class="reveal">
-      <div class="sec-head">
-        <div><p class="label">Stations</p><h3>Or pick a mood</h3></div>
-        <p class="sub">Twelve late-night frequencies. Hover to feel each one, click to tune in.</p>
-      </div>
-      <ol class="stations" id="stationList"></ol>
-    </section>
   </div>
 
   <div class="wrap">
@@ -146,8 +144,20 @@
   </div>
 </main>
 
-<footer><div class="wrap"><span>After Hours · music for how you feel</span><span>Tracks open on Spotify or YouTube</span></div></footer>
+<footer><div class="wrap"><span>After Hours · music for how you feel</span><span>Previews from Apple Music and Deezer</span></div></footer>
 <div class="toast" id="toast" role="status"></div>
+<div class="player" id="player" role="region" aria-label="Song preview player">
+  <div class="pl-art" id="plArt" aria-hidden="true"></div>
+  <div class="pl-meta"><b id="plTitle"></b><span id="plArtist"></span></div>
+  <div class="pl-ctrl">
+    <button type="button" id="plPrev" aria-label="Previous song"></button>
+    <button type="button" id="plPlay" class="pl-play" aria-label="Play preview"></button>
+    <button type="button" id="plNext" aria-label="Next song"></button>
+  </div>
+  <a id="plOpen" class="pl-open" target="_blank" rel="noopener">Open in Apple Music <span aria-hidden="true">↗</span></a>
+  <button type="button" id="plClose" class="pl-x" aria-label="Close player">×</button>
+  <div class="pl-prog" aria-hidden="true"><i id="plProg"></i></div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha384-CI3ELBVUz9XQO+97x6nwMDPosPR5XvsxW2ua7N1Xeygeh1IxtgqtCkGfQY9WWdHu" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="app.js"></script>
