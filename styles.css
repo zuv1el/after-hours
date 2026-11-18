@@ -231,6 +231,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .t-main{min-width:0}
 .t-title,.t-artist{overflow:hidden;text-overflow:ellipsis}
 .t-artist{display:block}
+.full{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;background:rgba(18,16,20,.8);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.full-label{margin:0;font-size:.9rem;color:var(--paper)}
+.full-label span{display:block;color:var(--muted);font-size:.8rem;margin-top:2px}
+.full-links{display:flex;flex-wrap:wrap;gap:8px}
+.svc{white-space:nowrap;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;font-size:.88rem;color:var(--paper);text-decoration:none;background:rgba(255,255,255,.03);transition:border-color .15s,background .15s}
+.svc:hover,.svc:focus-visible{border-color:var(--paper);background:rgba(255,255,255,.07)}
+.svc i{width:9px;height:9px;border-radius:50%;flex:none}
+.svc span{opacity:.6;font-size:.8em}
+.svc-sp i{background:#1ed760}.svc-am i{background:#fa2d48}.svc-yt i{background:#ff0033}
+@media (max-width:620px){.full{padding:14px}.full-links{width:100%;gap:6px}.svc{flex:1 1 auto;justify-content:center;gap:7px;padding:10px 10px;font-size:.85rem}.svc span{display:none}}
 .credit{color:var(--muted);font-size:.8rem;margin:14px 0 0}
 .actions .go svg,.actions .go span{pointer-events:none}
 .actions .go svg{width:18px;height:18px}
