@@ -48,7 +48,8 @@ Rules:
 - "note": one short sentence (max 12 words) on why the song fits at this point. Speak to the listener. Never quote lyrics.
 - valence is -1 (very negative) to 1 (very positive); energy is -1 (very calm or tired) to 1 (very intense).
 - Set "care" to true only if the text suggests they may be thinking about harming themselves.
-- "read": one or two warm, plain sentences reflecting how they feel. "title": an evocative playlist title of 1 to 4 words.`;
+- "read": one or two warm, plain sentences reflecting how they feel. "title": an evocative playlist title of 1 to 4 words.
+- "search": 2 to 5 plain words someone would type into Spotify, Apple Music or YouTube to find existing playlists with this same feel. Combine the mood and the genre or sound (for example "late night afrobeats chill" or "sad rainy day piano"). No artist or song names, no quotes.`;
 }
 
 const SCHEMA = {
@@ -56,6 +57,7 @@ const SCHEMA = {
   properties: {
     read: { type: "STRING" },
     title: { type: "STRING" },
+    search: { type: "STRING" },
     valence: { type: "NUMBER" },
     energy: { type: "NUMBER" },
     care: { type: "BOOLEAN" },
@@ -68,7 +70,7 @@ const SCHEMA = {
       }
     }
   },
-  required: ["read", "title", "valence", "energy", "tracks"]
+  required: ["read", "title", "search", "valence", "energy", "tracks"]
 };
 
 async function ask(model, key, prompt) {
@@ -123,6 +125,7 @@ export default async (req) => {
       return json({
         title: clean(out.title, 48) || "Tonight",
         read: clean(out.read, 280),
+        search: clean(out.search, 60).replace(/["“”]/g, ""),
         valence: Math.max(-1, Math.min(1, Number(out.valence) || 0)),
         energy: Math.max(-1, Math.min(1, Number(out.energy) || 0)),
         care: !!out.care,
