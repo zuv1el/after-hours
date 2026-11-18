@@ -174,7 +174,7 @@ Rules:
 - Set "care" to true only if the text suggests they may be thinking about harming themselves.
 
 Reply with JSON only, in this shape:
-{"read":"one or two warm, plain sentences reflecting how they feel","title":"evocative playlist title, 1 to 4 words","valence":0,"energy":0,"care":false,"tracks":[{"title":"","artist":"","note":""}]}`;
+{"read":"one or two warm, plain sentences reflecting how they feel","title":"evocative playlist title, 1 to 4 words","search":"2 to 5 plain words to search Spotify, Apple Music or YouTube for existing playlists with this same feel, mood plus genre or sound, no artist names","valence":0,"energy":0,"care":false,"tracks":[{"title":"","artist":"","note":""}]}`;
   try{
     const out=await sample.json(prompt,{modelTier:"default"});
     if(!out||!Array.isArray(out.tracks)) return null;
@@ -182,7 +182,7 @@ Reply with JSON only, in this shape:
       .map(t=>({title:t.title.trim(),artist:t.artist.trim(),note:typeof t.note==="string"?t.note.trim():""}));
     if(tracks.length<3) return null;
     const v=clamp(Number(out.valence)||0), e=clamp(Number(out.energy)||0);
-    return {title:String(out.title||"Tonight").slice(0,48),read:String(out.read||"").slice(0,280),moodKey:rankMoods(v,e)[0],v,e,tracks,mode,text,genre,source:"text",by:"claude",care:!!out.care};
+    return {title:String(out.title||"Tonight").slice(0,48),read:String(out.read||"").slice(0,280),search:typeof out.search==="string"?out.search.slice(0,60):"",moodKey:rankMoods(v,e)[0],v,e,tracks,mode,text,genre,source:"text",by:"claude",care:!!out.care};
   }catch(err){ if(err&&err.code==="not_granted") claudeOff=true; return null; }
 }
 
@@ -638,6 +638,18 @@ let current=null, mode="match", busy=false;
 const firstArtist=a=>String(a).split(/\s+(?:ft\.?|feat\.?|featuring|x)\s+|,|&/i)[0].trim();
 const sp=t=>"https://open.spotify.com/search/"+encodeURIComponent(t.title+" "+firstArtist(t.artist))+"/tracks";
 const yt=t=>"https://www.youtube.com/results?search_query="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
+/* Whole-playlist links: playlists with the same feel on each service */
+const MOODQ={rain:"rainy day chill",heart:"heartbreak sad songs",late:"late night thoughts",burn:"angry release",focus:"deep focus",slow:"slow jams",gold:"golden hour chill",neon:"night drive",main:"main character energy",party:"party hits",past:"nostalgic throwback",empty:"tired calm acoustic"};
+function plQuery(pl){
+  const q=String(pl.search||"").replace(/["“”]/g,"").replace(/\s+/g," ").trim();
+  if(q) return q.slice(0,60);
+  const base=MOODQ[pl.moodKey]||"late night";
+  return ((pl.genre?pl.genre+" ":"")+(pl.mode==="lift"&&!pl.genre?"uplifting "+base:base)).slice(0,60);
+}
+const plLinks=pl=>{ const q=encodeURIComponent(plQuery(pl)); return [
+  ["Spotify","sp","https://open.spotify.com/search/"+q+"/playlists"],
+  ["Apple Music","am","https://music.apple.com/us/search?term="+q],
+  ["YouTube","yt","https://www.youtube.com/results?search_query="+q+"&sp=EgIQAw%253D%253D"]]; };
 const am=t=>t.tune&&t.tune.src!=="deezer"&&t.tune.url?t.tune.url:"https://music.apple.com/us/search?term="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
 const esc=s=>String(s).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
 const goTo=el=>el.scrollIntoView({behavior:reduceMotion?"auto":"smooth",block:"start"});
@@ -735,7 +747,7 @@ async function readWithAI({text,mode,genre,avoid}){
     if(!r.ok) return null;
     const o=await r.json(); if(!o||!Array.isArray(o.tracks)||o.tracks.length<4) return null;
     const v=clamp(+o.valence||0), e=clamp(+o.energy||0);
-    return {title:String(o.title||"Tonight").slice(0,48),read:String(o.read||"").slice(0,280),moodKey:rankMoods(v,e)[0],v,e,
+    return {title:String(o.title||"Tonight").slice(0,48),read:String(o.read||"").slice(0,280),search:String(o.search||"").slice(0,60),moodKey:rankMoods(v,e)[0],v,e,
       tracks:o.tracks.map(t=>({title:String(t.title),artist:String(t.artist),note:String(t.note||"")})),mode,text,genre,source:"text",by:"ai",care:!!o.care};
   }catch{ return null; }
 }
@@ -862,6 +874,10 @@ function render(pl,{example=false,animate=true}={}){
           <button class="ghost" id="copy" type="button">Copy list</button>
         </div>
       </div>
+    </div>
+    <div class="full">
+      <p class="full-label">Full playlists with this feel <span>“${esc(plQuery(pl))}”</span></p>
+      <div class="full-links">${plLinks(pl).map(([n,c,u])=>`<a class="svc svc-${c}" href="${esc(u)}" target="_blank" rel="noopener" aria-label="Open playlists like this on ${n}"><i aria-hidden="true"></i>${n}<span aria-hidden="true">↗</span></a>`).join("")}</div>
     </div>
     <ol class="tracks" id="trackList">${pl.tracks.map((t,i)=>trackRow(t,i,animate)).join("")}</ol>
     <p class="credit">Previews from Apple Music and Deezer. Each song also opens in Apple Music, Spotify or YouTube.</p>`;
