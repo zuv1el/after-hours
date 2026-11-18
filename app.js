@@ -636,7 +636,7 @@ function $(s){return document.querySelector(s);}
 const resultEl=$("#result");
 let current=null, mode="match", busy=false;
 const firstArtist=a=>String(a).split(/\s+(?:ft\.?|feat\.?|featuring|x)\s+|,|&/i)[0].trim();
-const sp=t=>"https://open.spotify.com/search/"+encodeURIComponent(t.title+" "+firstArtist(t.artist))+"/tracks";
+const sp=t=>"https://open.spotify.com/search/"+encodeURIComponent(t.title+" "+firstArtist(t.artist));
 const yt=t=>"https://www.youtube.com/results?search_query="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
 /* Whole-playlist links: playlists with the same feel on each service */
 const MOODQ={rain:"rainy day chill",heart:"heartbreak sad songs",late:"late night thoughts",burn:"angry release",focus:"deep focus",slow:"slow jams",gold:"golden hour chill",neon:"night drive",main:"main character energy",party:"party hits",past:"nostalgic throwback",empty:"tired calm acoustic"};
@@ -647,7 +647,7 @@ function plQuery(pl){
   return ((pl.genre?pl.genre+" ":"")+(pl.mode==="lift"&&!pl.genre?"uplifting "+base:base)).slice(0,60);
 }
 const plLinks=pl=>{ const q=encodeURIComponent(plQuery(pl)); return [
-  ["Spotify","sp","https://open.spotify.com/search/"+q+"/playlists"],
+  ["Spotify","sp","https://open.spotify.com/search/"+encodeURIComponent(plQuery(pl)+" playlist")],
   ["Apple Music","am","https://music.apple.com/us/search?term="+q],
   ["YouTube","yt","https://www.youtube.com/results?search_query="+q+"&sp=EgIQAw%253D%253D"]]; };
 const am=t=>t.tune&&t.tune.src!=="deezer"&&t.tune.url?t.tune.url:"https://music.apple.com/us/search?term="+encodeURIComponent(t.title+" "+firstArtist(t.artist));
